@@ -1,0 +1,26 @@
+{
+  "puntos": 23,
+  "por_tipo": {
+    "T-01": 9,
+    "T-02": 14
+  },
+  "por_circuito": {
+    "C-01": 8,
+    "C-02": 7,
+    "C-03": 8
+  },
+  "entidades_arquitectura_conservadas": 3825,
+  "geometria_y_atributos_dxf_originales_conservados": true,
+  "auditoria_errores": 0,
+  "auditoria_correcciones": 0,
+  "recorridos_agregados": 0,
+  "origen_coordenadas": "Propuesta manual sobre arquitectura",
+  "coordenadas_del_excel_para_semisotano": false,
+  "patrones_arquitectura_reconstruidos_provisionalmente": [
+    "dash",
+    "trazo pequeño"
+  ],
+  "arquitectura_sha256": "24dc31cf85f0468dd8d3fc5007f4ff385f58f3784bed4d106b0e6f9e1bbba242",
+  "excel_sha256": "40e0bb7bf1bc0b5a4c0ca370629f0e897bef5171fd3d33fb4e676dfd53fd35c5",
+  "dxf_sha256": "e99bf6712b95fdf9c3540812ebae502711da88ca6a07b08313e531914adee6b8"
+}
