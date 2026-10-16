@@ -1,0 +1,16 @@
+{
+  "estado": "base corregida, ampliacion integrada en desarrollo",
+  "errores_auditoria": 0,
+  "reparaciones_auditoria": 0,
+  "distintivos_ampliados": 14,
+  "entradas_lisp_corregidas": 14,
+  "unidades": "metros",
+  "escala_base": "1:50",
+  "AutoCAD": "no disponible; AutoLISP no ejecutado",
+  "pendientes": [
+    "integracion de las tres especialidades",
+    "registro de las 13 luminarias",
+    "verificacion grafica normativa de simbolos",
+    "prueba en AutoCAD"
+  ]
+}
