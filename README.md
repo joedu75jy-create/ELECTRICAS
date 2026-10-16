@@ -2,6 +2,8 @@
 
 Una sola biblioteca integrada de electricidad, comunicaciones y DACI.
 
+Revision 2.0-DGE: interruptores y tomacorrientes corregidos, 36 simbolos DGE adicionales y referencia por figura.
+
 Archivo principal: `11_PLANTILLA_GENERAL_INTEGRADA/PLANTILLA_GENERAL_INTEGRADA.dxf`.
 
 Entrega simplificada: `08_ENTREGA_FINAL/ELECTRICAS_INTEGRADA.zip`.

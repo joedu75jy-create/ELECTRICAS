@@ -25,13 +25,14 @@ from geometria import crear_bloque
 ROOT=Path(__file__).resolve().parents[1]
 S=.05                       # metros por mm de papel a escala 1:50
 W,H=420,297
-VERSION='1.0'
+VERSION='2.0-DGE'
 FAMILIAS={
  '01_ILUMINACION_CONTROLES': ('01','ILUMINACION Y CONTROLES','IE | Electricidad',34),
  '02_TOMACORRIENTES_FUERZA': ('02','TOMACORRIENTES Y FUERZA','IE | Electricidad',34),
  '03_CAJAS_TABLEROS_CIRCUITOS': ('03','CAJAS, TABLEROS Y CIRCUITOS','IE | Electricidad',34),
  '04_DATA_COMUNICACIONES': ('04','DATA Y COMUNICACIONES','IC | Comunicaciones',144),
  '05_DETECCION_ALARMA': ('05','DETECCION Y ALARMA','DACI | Incendios',14),
+ '08_BASE_DGE': ('08','BASE NORMATIVA DGE','DGE | Instalaciones en edificaciones',34),
 }
 
 
@@ -94,7 +95,7 @@ def marco(doc, origin, number,title,subtitle,color=144):
     linea(m,(15,250),(405,250),origin,color,35)
     texto(m,number,382,266,8.0,color,origin)
     linea(m,(15,24),(405,24),origin)
-    texto(m,'Convenciones de proyecto. Dimensiones del simbolo distintas de las del equipo.',15,17,2.5,7,origin)
+    texto(m,'Referencia por bloque en leyenda. El simbolo no representa dimensiones fisicas del equipo.',15,17,2.5,7,origin)
     texto(m,'1:50 | A3 | v'+VERSION+' | '+number,320,12,2.5,7,origin)
     texto(m,'EI: insertar | EIESCALA | EIEDITA | EIGIRA | EINUMERA | EIRUTA',15,12,2.5,7,origin)
 
@@ -111,8 +112,9 @@ def layout_sheet(doc,name,origin):
     return layout
 
 
-def hoja_simbolos(doc,specs,origin,familia):
+def hoja_simbolos(doc,specs,origin,familia,sufijo=''):
     number,title,subtitle,color=FAMILIAS[familia]
+    if sufijo:number+='.'+sufijo
     marco(doc,origin,number,title,subtitle,color)
     m=doc.modelspace()
     cols=4;cellw=97.5;cellh=40
@@ -126,20 +128,25 @@ def hoja_simbolos(doc,specs,origin,familia):
                            dxfattribs={'layer':spec.capa,'xscale':S,'yscale':S,'zscale':S})
         ins.add_auto_attribs(spec.atributos())
         for attr in ins.attribs:attr.dxf.color=256
-        texto(m,spec.nombre,x+3,y+3,2.2,8,origin)
+        pending=not spec.datos.get('PAGINA_DGE') and not spec.forma.startswith('caja')
+        texto(m,spec.nombre+(' [P]' if pending else ''),x+3,y+3,2.2,8,origin)
         linea(m,(x,y),(x+cellw-3,y),origin)
         if col>0:linea(m,(x-1,y+3),(x-1,y+cellh-2),origin)
+    if any(not s.datos.get('PAGINA_DGE') and not s.forma.startswith('caja') for s in specs):
+        texto(m,'[P]: referencia grafica especifica pendiente; no se declara simbolo DGE.',18,32,2.5,7,origin)
     if familia=='01_ILUMINACION_CONTROLES':
         texto(m,'L-01 a L-04 definidos por el prompt. Otros 9 modelos pendientes del registro original.',18,39,2.5,7,origin)
     elif familia=='02_TOMACORRIENTES_FUERZA':
-        texto(m,'Rombo = alimentacion estabilizada (convencion interna). Tierra basada en el ZIP aportado.',18,39,2.5,7,origin)
+        texto(m,'DGE 09-93-17: T = tierra. E = estabilizado (leyenda del proyecto). 3 rayas = trifasico.',18,39,2.5,7,origin)
     elif familia=='03_CAJAS_TABLEROS_CIRCUITOS':
         texto(m,'Cajas rectangulares con codigo interior. Dimensiones y materiales: definir en el proyecto.',18,39,2.5,7,origin)
     elif familia=='04_DATA_COMUNICACIONES':
         texto(m,'D2 = 2 conectores RJ45 Cat 6A. Equipo, cable, montaje y separaciones: segun proyecto.',18,27,2.5,7,origin)
     elif familia=='05_DETECCION_ALARMA':
         texto(m,'SLC: deteccion / direccionamiento. NAC: notificacion. Sin redes hidraulicas contra incendios.',18,39,2.5,7,origin)
-    return layout_sheet(doc,number+'_'+familia[3:],origin)
+    elif familia=='08_BASE_DGE':
+        texto(m,'DGE seccion 9: figuras cotejadas con las paginas 78-84. La reticula auxiliar no es parte del simbolo.',18,27,2.5,7,origin)
+    return layout_sheet(doc,number.replace('.','_')+'_'+familia[3:],origin)
 
 
 def hoja_rutas(doc,items,origin,number,title):
@@ -167,8 +174,12 @@ def exportar_familias(master,specs):
         imp=Importer(master,d)
         imp.import_blocks([s.nombre for s in subset]);imp.finalize()
         families=list(dict.fromkeys(s.familia for s in subset))
-        for index,f in enumerate(families):
-            hoja_simbolos(d,[s for s in subset if s.familia==f],(index*450,-800),f)
+        index=0
+        for f in families:
+            group=[s for s in subset if s.familia==f]
+            for offset in range(0,len(group),20):
+                hoja_simbolos(d,group[offset:offset+20],(index*450,-800),f,str(offset//20+1) if len(group)>20 else '')
+                index+=1
         d.set_modelspace_vport(height=H*S,center=(W*S/2,(-800+H/2)*S))
         d.saveas(dest)
 
@@ -178,12 +189,12 @@ def guardar_datos(specs):
             'factor_insercion_m':'escala / 1000','factor_insercion_mm':'escala',
             'bloques':[asdict(s) for s in specs],'rutas':rutas(),
             'luminarias_pendientes':9,'bloques_dinamicos_nativos':False,
-            'estado_normativo':'Convenciones de proyecto; fuentes normativas originales no disponibles'}
+            'estado_normativo':'Cotejo DGE por simbolo; referencias no comprobadas identificadas por separado'}
     (ROOT/'06_CODIGO_FUENTE'/'catalogo_generado.json').write_text(json.dumps(config,ensure_ascii=False,indent=2),encoding='utf-8')
     with (ROOT/'05_CATALOGOS'/'CATALOGO_BLOQUES.csv').open('w',encoding='utf-8-sig',newline='') as f:
         writer=csv.writer(f,delimiter=';')
-        writer.writerow(['BLOQUE','CLAVE_INSERCION','TIPO','DESCRIPCION','SISTEMA','CAPA','MONTAJE','ORIGEN'])
-        for s in specs:writer.writerow([s.nombre,s.sistema+':'+s.codigo,s.codigo,s.descripcion,s.sistema,s.capa,s.montaje,s.fuente])
+        writer.writerow(['BLOQUE','CLAVE_INSERCION','TIPO','DESCRIPCION','SISTEMA','CAPA','MONTAJE','ORIGEN','REFERENCIA','PAGINA_DGE','CONTROL'])
+        for s in specs:writer.writerow([s.nombre,s.sistema+':'+s.codigo,s.codigo,s.descripcion,s.sistema,s.capa,s.montaje,s.fuente,s.atributos()['NORMA'],s.datos.get('PAGINA_DGE',''),s.datos.get('CONTROL','')])
     entries=[]
     for s in specs:
         attrs=' '.join('('+ls(k)+' . '+ls(v)+')' for k,v in s.atributos().items())
@@ -270,12 +281,12 @@ def documentos(specs):
 
 ## Un solo archivo de trabajo
 
-La plantilla principal contiene electricidad ({counts['IE']} bloques), comunicaciones ({counts['IC']}) y DACI ({counts['DACI']}).
-Los siete layouts A3 son paginas de catalogo dentro del mismo archivo. No necesita cambiar de plantilla.
+    La plantilla principal contiene electricidad ({counts['IE']} bloques), comunicaciones ({counts['IC']}) y DACI ({counts['DACI']}).
+Los nueve layouts A3 son paginas de catalogo dentro del mismo archivo. No necesita cambiar de plantilla.
 Las bibliotecas por especialidad son archivos de respaldo para reutilizacion independiente.
 El catalogo esta en Modelo, debajo del area de trabajo (Y entre -40 y -25.15 m). Trabaje con la arquitectura cerca de 0,0.
 EICATALOGO muestra la primera hoja. Los layouts 01 a 07 permiten consultar el resto.
-Se conservan las definiciones JY_ de la entrega original; los comandos nuevos gestionan IE_, IC_ y DACI_.
+La base JY_ original queda archivada como referencia; las definiciones anteriores no se insertan en la biblioteca corregida.
 
 ## Comandos
 
@@ -335,9 +346,11 @@ Las distancias de separacion de energia/data se verifican en cada proyecto; la b
 
 ## Simbologia y alcance
 
-Toda la simbologia nueva esta identificada como **convencion interna de proyecto**. No se atribuye caracter oficial a simbolos sin una fuente comprobada.
-La puesta a tierra en tomacorrientes parte de la representacion del ZIP recibido. No se equipara automaticamente 2P+T con un simbolo trifasico.
-El rombo adicional identifica alimentacion estabilizada dentro de esta biblioteca; piso, techo y mesada tienen distintivos propios.
+La revision 2.0 coteja los simbolos electricos con las laminas DGE, seccion 9. El CSV y los atributos NORMA/PAGINA_DGE documentan cada referencia. Los dispositivos sin referencia especifica comprobada siguen identificados como convenciones pendientes, especialmente IC/DACI y sensores.
+Los tomacorrientes usan el simbolo monofasico con T de 09-93-17. Las tres rayas de 09-93-15 significan trifasico, no 2P+T.
+Se retira el rombo de estabilizado y la tierra exterior. E identifica estabilizado en la leyenda, PA se basa en 09-93-19, y el marco de piso en 09-93-14. Techo/mesada se indican con atributos, sin inventar distintivos geometricos.
+S con a/b/c corresponde al interruptor unipolar y los grupos controlados; dos o tres teclas independientes no se presentan como bipolar S2. S2, S3 y S4 normativos tienen bloques separados en la base DGE.
+Las variantes con letra S permanecen derechas al usar los comandos de esta biblioteca; no necesitan orientar la letra con el muro.
 Las cajas tienen contorno rectangular y codigo interior. Sus dimensiones, material e IP se dejan editables para definicion de proyecto.
 Solo L-01 a L-04 estan descritas en los textos. Los otros 9 modelos requieren el registro original y no se inventan.
 Potencias, alturas no documentadas, corrientes, modelos DACI y direcciones se dejan vacios para evitar datos ficticios.
@@ -367,24 +380,31 @@ Los informes en 07_PRUEBAS distinguen pruebas ejecutadas y pendientes. Para rege
 '''
     (ROOT/'05_CATALOGOS'/'GUIA_DE_USO.md').write_text(guide,encoding='utf-8')
     (ROOT/'README.md').write_text('# ELECTRICAS\n\nUna sola biblioteca integrada de electricidad, comunicaciones y DACI.\n\n'
+        'Revision 2.0-DGE: interruptores y tomacorrientes corregidos, 36 simbolos DGE adicionales y referencia por figura.\n\n'
         'Archivo principal: `11_PLANTILLA_GENERAL_INTEGRADA/PLANTILLA_GENERAL_INTEGRADA.dxf`.\n\n'
         'Entrega simplificada: `08_ENTREGA_FINAL/ELECTRICAS_INTEGRADA.zip`.\n\n'
         'Uso y limitaciones: [GUIA_DE_USO.md](05_CATALOGOS/GUIA_DE_USO.md).\n\n'
         'Regeneracion: `python 06_CODIGO_FUENTE/generar.py`, `python 06_CODIGO_FUENTE/verificar.py`.\n',encoding='utf-8')
     normas='''# Referencias tecnicas y estado de comprobacion
 
-No se aportaron textos normativos originales ni laminas oficiales. Las siguientes son referencias a consultar, sin afirmar edicion vigente ni conformidad certificada:
+Se consulto la ficha oficial MINEM de la R.M. 091-2002-EM/VME y una copia de la seccion 9 del documento DGE. La copia de consulta procede de un espejo publico, no de un enlace oficial descargado. Las figuras de paginas 76 y 78-84 se cotejaron visualmente; esto no certifica todo el expediente.
+
+Ficha oficial: https://www.gob.pe/institucion/minem/normas-legales/108773-0091-2002-mem
+
+Copia consultada: https://github.com/gaelrenzo/instalacion-electricas/blob/3619a7f06e64488628182d915e9d85e87d1515a5/referencias/normativa/pdf/simbologia-dge-seccion-9.pdf
 
 | Documento solicitado | Aplicacion a verificar | Estado |
 |---|---|---|
 | CNE Utilizacion / MINEM | Criterios electricos y simbolos aplicables | Fuente original no disponible |
+| DGE seccion 9 | Simbolos de edificaciones indicados en CSV | Figuras cotejadas en copia de consulta y ficha oficial de aprobacion |
 | RNE EM.010 | Instalaciones electricas interiores | Fuente original no disponible |
 | IEC (simbolos aplicables) | Correspondencia grafica cuando proceda | Edicion y simbolo especifico pendientes |
 | ANSI/TIA-568, 569, 606, 607 | Cableado, canalizaciones, administracion y puesta a tierra | Edicion y especificacion de proyecto pendientes |
 | RNE A.130 | Deteccion, alarma y seguridad | Fuente original no disponible |
 | NFPA 72 | Arquitectura y dispositivos DACI cuando sea exigible | Edicion aplicable y fichas de fabricante pendientes |
 
-Cada bloque nuevo tiene atributo NORMA que lo identifica como convencion de proyecto. La fuente del catalogo es el prompt y, en tomacorrientes, la geometria del paquete aportado. La denominacion DGE dentro de bloques JY_ heredados se conserva como dato de origen, no como validacion independiente.
+NORMA identifica la figura DGE cotejada o la referencia que aun falta. PAGINA_DGE permite ir a la lamina. El CSV distingue simbolo base y datos de proyecto. La base normativa adicional contiene interruptores S/S2/S3/S4, tomas monofasicas/trifasicas, luminarias y dispositivos que faltaban en la primera entrega.
+La norma presenta 09-93-08/09 como circulos. Las cajas rectangulares solicitadas se mantienen como contornos fisicos, sin atribuirles esos codigos; los simbolos generales DGE se ofrecen por separado en el mismo archivo.
 
 Esta entrega es una herramienta de representacion CAD. No calcula cargas, protecciones, secciones, cobertura de detectores, inteligibilidad, autonomia ni distancias normativas. Esas decisiones pertenecen al diseno del expediente.
 '''
@@ -401,16 +421,15 @@ def main():
     assert len({s.nombre for s in specs})==len(specs)
     doc=nuevo();tipos_linea(doc)
     for spec in specs:crear_bloque(doc,spec)
-    # Conserva los bloques de la base aportada, sin copiar la antigua lamina.
-    legacy=ezdxf.readfile(ROOT/'01_PLANTILLA_MAESTRA'/'BASE_IE_CORREGIDA.dxf')
-    importer=Importer(legacy,doc)
-    importer.import_blocks([b.name for b in legacy.blocks if b.name.startswith('JY_')])
-    importer.finalize()
-    for i,f in enumerate(FAMILIAS):
+    # La base anterior se conserva en referencias, no entre los simbolos activos corregidos.
+    for i,f in enumerate(k for k in FAMILIAS if k!='08_BASE_DGE'):
         hoja_simbolos(doc,[s for s in specs if s.familia==f],(450*i,-800),f)
     rr=rutas()
     hoja_rutas(doc,rr[:24],(450*5,-800),'06','CANALIZACIONES ELECTRICAS')
     hoja_rutas(doc,rr[24:],(450*6,-800),'07','RUTAS DE COMUNICACIONES Y DACI')
+    group=[s for s in specs if s.familia=='08_BASE_DGE']
+    for offset in range(0,len(group),20):
+        hoja_simbolos(doc,group[offset:offset+20],(450*(7+offset//20),-800),'08_BASE_DGE',str(offset//20+1))
     if 'Layout1' in doc.layouts:doc.layouts.delete('Layout1')
     doc.set_modelspace_vport(height=H*S,center=(W*S/2,(-800+H/2)*S))
     principal=ROOT/'11_PLANTILLA_GENERAL_INTEGRADA'/'PLANTILLA_GENERAL_INTEGRADA.dxf'

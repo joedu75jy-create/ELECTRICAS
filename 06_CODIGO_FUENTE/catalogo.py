@@ -146,7 +146,8 @@ def catalogo():
     for n, code, desc, layer, shape, mount in fire:
         add('DACI_'+n, code, desc, 'DACI', '05_DETECCION_ALARMA', layer, shape, mount,
             LAZO='', DIRECCION='', ZONA='', MODELO='', DIMENSIONES='' if n == 'CAJA' else '')
-    return r
+    from norma_dge import aplicar
+    return aplicar(r,add)
 
 
 CAPAS = {

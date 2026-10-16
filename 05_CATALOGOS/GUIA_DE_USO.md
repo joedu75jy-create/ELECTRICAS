@@ -1,4 +1,4 @@
-# ELECTRICAS — biblioteca integrada v1.0
+# ELECTRICAS — biblioteca integrada v2.0-DGE
 
 ## Inicio rapido
 
@@ -10,12 +10,12 @@
 
 ## Un solo archivo de trabajo
 
-La plantilla principal contiene electricidad (44 bloques), comunicaciones (19) y DACI (16).
-Los siete layouts A3 son paginas de catalogo dentro del mismo archivo. No necesita cambiar de plantilla.
+    La plantilla principal contiene electricidad (80 bloques), comunicaciones (19) y DACI (16).
+Los nueve layouts A3 son paginas de catalogo dentro del mismo archivo. No necesita cambiar de plantilla.
 Las bibliotecas por especialidad son archivos de respaldo para reutilizacion independiente.
 El catalogo esta en Modelo, debajo del area de trabajo (Y entre -40 y -25.15 m). Trabaje con la arquitectura cerca de 0,0.
 EICATALOGO muestra la primera hoja. Los layouts 01 a 07 permiten consultar el resto.
-Se conservan las definiciones JY_ de la entrega original; los comandos nuevos gestionan IE_, IC_ y DACI_.
+La base JY_ original queda archivada como referencia; las definiciones anteriores no se insertan en la biblioteca corregida.
 
 ## Comandos
 
@@ -75,9 +75,11 @@ Las distancias de separacion de energia/data se verifican en cada proyecto; la b
 
 ## Simbologia y alcance
 
-Toda la simbologia nueva esta identificada como **convencion interna de proyecto**. No se atribuye caracter oficial a simbolos sin una fuente comprobada.
-La puesta a tierra en tomacorrientes parte de la representacion del ZIP recibido. No se equipara automaticamente 2P+T con un simbolo trifasico.
-El rombo adicional identifica alimentacion estabilizada dentro de esta biblioteca; piso, techo y mesada tienen distintivos propios.
+La revision 2.0 coteja los simbolos electricos con las laminas DGE, seccion 9. El CSV y los atributos NORMA/PAGINA_DGE documentan cada referencia. Los dispositivos sin referencia especifica comprobada siguen identificados como convenciones pendientes, especialmente IC/DACI y sensores.
+Los tomacorrientes usan el simbolo monofasico con T de 09-93-17. Las tres rayas de 09-93-15 significan trifasico, no 2P+T.
+Se retira el rombo de estabilizado y la tierra exterior. E identifica estabilizado en la leyenda, PA se basa en 09-93-19, y el marco de piso en 09-93-14. Techo/mesada se indican con atributos, sin inventar distintivos geometricos.
+S con a/b/c corresponde al interruptor unipolar y los grupos controlados; dos o tres teclas independientes no se presentan como bipolar S2. S2, S3 y S4 normativos tienen bloques separados en la base DGE.
+Las variantes con letra S permanecen derechas al usar los comandos de esta biblioteca; no necesitan orientar la letra con el muro.
 Las cajas tienen contorno rectangular y codigo interior. Sus dimensiones, material e IP se dejan editables para definicion de proyecto.
 Solo L-01 a L-04 estan descritas en los textos. Los otros 9 modelos requieren el registro original y no se inventan.
 Potencias, alturas no documentadas, corrientes, modelos DACI y direcciones se dejan vacios para evitar datos ficticios.

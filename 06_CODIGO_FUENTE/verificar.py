@@ -141,7 +141,7 @@ def main():
         doc,item=comprobar_dxf(path);log['dxf'].append(item)
         if path==mainpath:master=doc
     assert master.header['$INSUNITS']==6
-    assert len(master.layouts)==8,('Layouts',list(master.layout_names()))
+    assert len(master.layouts)==10,('Layouts',list(master.layout_names()))
     for s in specs:
         assert s.nombre in master.blocks
         b=master.blocks[s.nombre]
@@ -162,6 +162,14 @@ def main():
         if s.forma.startswith('toma_'):
             assert len(list(b.query('LINE')))>=6,('Puesta a tierra incompleta',s.nombre)
             assert s.atributos()['CONFIGURACION']=='2P+T'
+        if s.forma.startswith('dge_toma'):
+            assert len(list(b.query('LINE')))==(3 if '3f' in s.forma else 2),('Numero de rayas DGE incorrecto',s.nombre)
+            if s.nombre.startswith(('IE_TN_','IE_TE_')):
+                assert s.datos['DISTINTIVO'].startswith('T')
+                assert not list(b.query('HATCH')),('Tierra exterior o distintivo no solicitado',s.nombre)
+            if 'piso' in s.forma:
+                poly=list(b.query('LWPOLYLINE'));assert len(poly)==1
+                assert len(set(p[0] for p in poly[0].get_points('xy')))==2
         refs=[i for i in master.modelspace().query('INSERT') if i.dxf.name==s.nombre]
         assert len(refs)==1
         assert {a.dxf.tag:a.dxf.text for a in refs[0].attribs}==s.atributos()
@@ -172,7 +180,19 @@ def main():
     log['biblioteca']={'bloques_nuevos':len(specs),'bloques_heredados_JY':len([b for b in master.blocks if b.name.startswith('JY_')]),
                        'por_sistema':dict(Counter(s.sistema for s in specs)),
                        'cajas_rectangulares':len([s for s in specs if s.forma.startswith('caja')]),
-                       'luminarias':4,'luminarias_pendientes':9}
+                       'luminarias_modelos_documentados':4,'luminarias_pendientes':9,
+                       'simbolos_base_DGE':len([s for s in specs if s.nombre.startswith('IE_DGE_')])}
+    lookup={s.nombre:s for s in specs}
+    assert lookup['IE_DOBLE'].datos['TECLAS']=='2' and lookup['IE_DOBLE'].forma=='dge_S'
+    assert lookup['IE_DGE_31'].forma=='dge_S2'
+    assert lookup['IE_CONMUTACION'].datos['NORMA'].endswith('09-93-32')
+    assert lookup['IE_CRUCE'].datos['NORMA'].endswith('09-93-33')
+    log['revision_DGE']={'documento':'Seccion 9, copia consultada y contrastada con ficha oficial MINEM',
+        'pagina_impresa':[76,78,79,80,81,82,83,84],
+        'tomas_monofasicas':'dos rayas y T; no tres rayas trifasicas ni tierra exterior',
+        'estabilizados':'sin rombo; E como identificacion en leyenda',
+        'interruptores':'S con grupos de control; bipolar S2 separado de dos teclas independientes',
+        'cotejo':'visual documental, no certificacion de toda la biblioteca IC/DACI'}
     log['autolisp']=[check_lisp(p) for p in (ROOT/'04_AUTOLISP').glob('*.lsp')]
     assert any(v['archivo']=='ELECTRICAS.lsp' for v in log['autolisp'])
     for unit in ('METROS','MILIMETROS'):
@@ -204,14 +224,14 @@ def main():
         path=ROOT/'05_CATALOGOS'/name
         if path.exists():
             with fitz.open(path) as pdf:
-                assert len(pdf)==7
+                assert len(pdf)==9
                 for page in pdf:
                     assert abs(page.rect.width/72*25.4-420)<.1
                     pix=page.get_pixmap(matrix=fitz.Matrix(.25,.25),colorspace=fitz.csGRAY)
                     assert sum(v<240 for v in pix.samples)>100,('Pagina vacia',name,page.number)
                 log['pdf'].append({'archivo':name,'paginas':len(pdf),'formato':'A3','paginas_no_vacias':True})
     log['pendientes']=['Apertura y ploteo en AutoCAD','Ejecucion real de rutinas AutoLISP y panel DCL',
-                      'Verificacion normativa con fuentes originales y proyecto',
+                      'Referencia especifica para sensores, dispositivos IC/DACI y variantes de proyecto',
                       'Identificacion de 9 luminarias del registro no aportado',
                       'DWG/DWT y dinamicos nativos: no generados']
     log['resultado']='CORRECTO EN LAS PRUEBAS EJECUTADAS; pendientes detallados por separado'

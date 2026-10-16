@@ -47,6 +47,8 @@ class Icono:
 
 def dibujar(block, shape):
     g=Icono(block)
+    from norma_dge import dibujar as dibujar_norma
+    if dibujar_norma(g,shape):return
     if shape.startswith('toma_'):
         stable=shape.endswith('_est')
         kind=shape.removeprefix('toma_').removesuffix('_est')
@@ -196,9 +198,14 @@ def crear_bloque(doc, spec):
     block.block_record.dxf.units=0
     dibujar(block,spec.forma)
     for tag,value in spec.atributos().items():
-        visible=tag in ('CODIGO','CIRCUITO','ALTURA')
+        visible=tag in ('CODIGO','CIRCUITO','ALTURA','DISTINTIVO','CONTROL','NOTA_MONTAJE')
+        if tag=='CODIGO' and spec.nombre in ('IE_SIMPLE','IE_DOBLE','IE_TRIPLE','IE_CONMUTACION','IE_CRUCE'):
+            visible=False  # El plano muestra S y sus grupos; el identificador del dispositivo sigue editable.
         pos={'CODIGO':(10,.5),'CIRCUITO':(10,-3),'ALTURA':(10,-6.5)}.get(tag,(0,0))
         width=1.0
+        if tag=='DISTINTIVO':pos=(2.9,-2.6) if spec.forma.startswith('dge_toma') else (3,-3)
+        if tag=='CONTROL':pos=(3.5,-4.5)
+        if tag=='NOTA_MONTAJE':pos=(10,-10)
         if tag=='CODIGO' and spec.forma.startswith('caja'):
             pos=(-3.1,-1.1)
             width=min(1.0,6.2/max(1,len(value)*1.6))

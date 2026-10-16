@@ -94,6 +94,7 @@
 
 (defun EI:crear (entry pt sc ang vals / name def d tag p a en flags txt width failed)
   (setq name (car entry))
+  (if (= (EI:valor "GIRO_GRAFICO" vals "") "FIJO_LEGIBLE") (setq ang 0.0))
   (if (not (tblsearch "BLOCK" name))
     (progn (princ "\nBloque ausente: abra la plantilla integrada o copie el bloque a este dibujo.") nil)
     (progn

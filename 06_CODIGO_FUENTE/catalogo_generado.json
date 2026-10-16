@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "2.0-DGE",
   "unidades_modelo": "m",
   "geometria_bloque": "mm en papel; unidades de bloque=0",
   "factor_insercion_m": "escala / 1000",
@@ -12,14 +12,18 @@
       "sistema": "IE",
       "familia": "01_ILUMINACION_CONTROLES",
       "capa": "IE-LUMINARIAS",
-      "forma": "luz_lineal",
+      "forma": "dge_60",
       "montaje": "POR CONFIRMAR",
       "datos": {
         "POTENCIA": "",
         "IP": "IP65",
-        "DIM_FISICA": ""
+        "DIM_FISICA": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-60",
+        "PAGINA_DGE": "83",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Simbolo general de luminaria; LED/IP65 se especifica por codigo y atributos, sin llamarlo fluorescente."
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 83; 09-93-60. Simbolo general de luminaria; LED/IP65 se especifica por codigo y atributos, sin llamarlo fluorescente."
     },
     {
       "nombre": "IE_L02",
@@ -28,14 +32,18 @@
       "sistema": "IE",
       "familia": "01_ILUMINACION_CONTROLES",
       "capa": "IE-LUMINARIAS",
-      "forma": "luz_aplique",
+      "forma": "dge_52",
       "montaje": "PARED",
       "datos": {
         "POTENCIA": "",
         "IP": "IP65",
-        "DIM_FISICA": ""
+        "DIM_FISICA": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-52",
+        "PAGINA_DGE": "82",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Salida en pared; LED/IP65 por ficha de tipo L-02."
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 82; 09-93-52. Salida en pared; LED/IP65 por ficha de tipo L-02."
     },
     {
       "nombre": "IE_L03",
@@ -44,13 +52,17 @@
       "sistema": "IE",
       "familia": "01_ILUMINACION_CONTROLES",
       "capa": "IE-LUMINARIAS",
-      "forma": "luz_panel",
+      "forma": "dge_53",
       "montaje": "EMPOTRADO",
       "datos": {
         "POTENCIA": "",
-        "DIM_FISICA": "600x600 mm"
+        "DIM_FISICA": "600x600 mm",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-53",
+        "PAGINA_DGE": "82",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Salida empotrada en techo; codigo L-03/L-04 identifica panel o downlight, no su huella fisica."
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 82; 09-93-53. Salida empotrada en techo; codigo L-03/L-04 identifica panel o downlight, no su huella fisica."
     },
     {
       "nombre": "IE_L04",
@@ -59,73 +71,115 @@
       "sistema": "IE",
       "familia": "01_ILUMINACION_CONTROLES",
       "capa": "IE-LUMINARIAS",
-      "forma": "luz_downlight",
+      "forma": "dge_53",
       "montaje": "EMPOTRADO",
       "datos": {
         "POTENCIA": "",
-        "DIM_FISICA": ""
+        "DIM_FISICA": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-53",
+        "PAGINA_DGE": "82",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Salida empotrada en techo; codigo L-03/L-04 identifica panel o downlight, no su huella fisica."
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 82; 09-93-53. Salida empotrada en techo; codigo L-03/L-04 identifica panel o downlight, no su huella fisica."
     },
     {
       "nombre": "IE_SIMPLE",
-      "codigo": "IS",
+      "codigo": "S_a",
       "descripcion": "Interruptor simple",
       "sistema": "IE",
       "familia": "01_ILUMINACION_CONTROLES",
       "capa": "IE-INTERRUPTORES",
-      "forma": "control_1",
+      "forma": "dge_S",
       "montaje": "POR DEFINIR",
-      "datos": {},
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-30 (variante S)",
+        "PAGINA_DGE": "80",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "S: interruptor unipolar. a/b/c: grupos controlados del proyecto. Dos o tres teclas independientes no equivalen a bipolar S2.",
+        "CONTROL": "a",
+        "TECLAS": "1",
+        "GIRO_GRAFICO": "FIJO_LEGIBLE"
+      },
+      "fuente": "DGE seccion 9, p. 80; 09-93-30 (variante S). S: interruptor unipolar. a/b/c: grupos controlados del proyecto. Dos o tres teclas independientes no equivalen a bipolar S2."
     },
     {
       "nombre": "IE_DOBLE",
-      "codigo": "ID",
+      "codigo": "S_ab",
       "descripcion": "Interruptor doble",
       "sistema": "IE",
       "familia": "01_ILUMINACION_CONTROLES",
       "capa": "IE-INTERRUPTORES",
-      "forma": "control_2",
+      "forma": "dge_S",
       "montaje": "POR DEFINIR",
-      "datos": {},
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-30 (variante S)",
+        "PAGINA_DGE": "80",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "S: interruptor unipolar. a/b/c: grupos controlados del proyecto. Dos o tres teclas independientes no equivalen a bipolar S2.",
+        "CONTROL": "a,b",
+        "TECLAS": "2",
+        "GIRO_GRAFICO": "FIJO_LEGIBLE"
+      },
+      "fuente": "DGE seccion 9, p. 80; 09-93-30 (variante S). S: interruptor unipolar. a/b/c: grupos controlados del proyecto. Dos o tres teclas independientes no equivalen a bipolar S2."
     },
     {
       "nombre": "IE_TRIPLE",
-      "codigo": "IT",
+      "codigo": "S_abc",
       "descripcion": "Interruptor triple",
       "sistema": "IE",
       "familia": "01_ILUMINACION_CONTROLES",
       "capa": "IE-INTERRUPTORES",
-      "forma": "control_3",
+      "forma": "dge_S",
       "montaje": "POR DEFINIR",
-      "datos": {},
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-30 (variante S)",
+        "PAGINA_DGE": "80",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "S: interruptor unipolar. a/b/c: grupos controlados del proyecto. Dos o tres teclas independientes no equivalen a bipolar S2.",
+        "CONTROL": "a,b,c",
+        "TECLAS": "3",
+        "GIRO_GRAFICO": "FIJO_LEGIBLE"
+      },
+      "fuente": "DGE seccion 9, p. 80; 09-93-30 (variante S). S: interruptor unipolar. a/b/c: grupos controlados del proyecto. Dos o tres teclas independientes no equivalen a bipolar S2."
     },
     {
       "nombre": "IE_CONMUTACION",
-      "codigo": "IC",
+      "codigo": "S3",
       "descripcion": "Interruptor de conmutacion",
       "sistema": "IE",
       "familia": "01_ILUMINACION_CONTROLES",
       "capa": "IE-INTERRUPTORES",
-      "forma": "control_conmuta",
+      "forma": "dge_S3",
       "montaje": "POR DEFINIR",
-      "datos": {},
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-32",
+        "PAGINA_DGE": "81",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Simbolo base cotejado visualmente con la lamina DGE",
+        "CONTROL": "a",
+        "GIRO_GRAFICO": "FIJO_LEGIBLE"
+      },
+      "fuente": "DGE seccion 9, p. 81; 09-93-32. Simbolo base cotejado visualmente con la lamina DGE"
     },
     {
       "nombre": "IE_CRUCE",
-      "codigo": "IX",
+      "codigo": "S4",
       "descripcion": "Interruptor de cruce",
       "sistema": "IE",
       "familia": "01_ILUMINACION_CONTROLES",
       "capa": "IE-INTERRUPTORES",
-      "forma": "control_cruce",
+      "forma": "dge_S4",
       "montaje": "POR DEFINIR",
-      "datos": {},
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-33",
+        "PAGINA_DGE": "81",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Simbolo base cotejado visualmente con la lamina DGE",
+        "CONTROL": "a",
+        "GIRO_GRAFICO": "FIJO_LEGIBLE"
+      },
+      "fuente": "DGE seccion 9, p. 81; 09-93-33. Simbolo base cotejado visualmente con la lamina DGE"
     },
     {
       "nombre": "IE_PULSADOR",
@@ -134,10 +188,15 @@
       "sistema": "IE",
       "familia": "01_ILUMINACION_CONTROLES",
       "capa": "IE-INTERRUPTORES",
-      "forma": "pulsador",
+      "forma": "dge_43",
       "montaje": "POR DEFINIR",
-      "datos": {},
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-43",
+        "PAGINA_DGE": "82",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Simbolo base cotejado visualmente con la lamina DGE"
+      },
+      "fuente": "DGE seccion 9, p. 82; 09-93-43. Simbolo base cotejado visualmente con la lamina DGE"
     },
     {
       "nombre": "IE_MOVIMIENTO",
@@ -170,10 +229,15 @@
       "sistema": "IE",
       "familia": "01_ILUMINACION_CONTROLES",
       "capa": "IE-INTERRUPTORES",
-      "forma": "regulador",
+      "forma": "dge_37",
       "montaje": "POR DEFINIR",
-      "datos": {},
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-37",
+        "PAGINA_DGE": "81",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Simbolo base cotejado visualmente con la lamina DGE"
+      },
+      "fuente": "DGE seccion 9, p. 81; 09-93-37. Simbolo base cotejado visualmente con la lamina DGE"
     },
     {
       "nombre": "IE_TN_M040",
@@ -182,7 +246,7 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-TOMAS-NORMALES",
-      "forma": "toma_pared",
+      "forma": "dge_toma",
       "montaje": "PARED",
       "datos": {
         "ALTURA": "+0.40 m",
@@ -190,9 +254,16 @@
         "CONFIGURACION": "2P+T",
         "ALIMENTACION": "NORMAL",
         "CORRIENTE": "",
-        "IP": ""
+        "IP": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-17",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior.",
+        "DISTINTIVO": "T",
+        "NUM_TOMAS": "2",
+        "NOTA_MONTAJE": ""
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 79; 09-93-17. T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior."
     },
     {
       "nombre": "IE_TN_M120",
@@ -201,7 +272,7 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-TOMAS-NORMALES",
-      "forma": "toma_pared",
+      "forma": "dge_toma",
       "montaje": "PARED",
       "datos": {
         "ALTURA": "+1.20 m",
@@ -209,9 +280,16 @@
         "CONFIGURACION": "2P+T",
         "ALIMENTACION": "NORMAL",
         "CORRIENTE": "",
-        "IP": ""
+        "IP": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-17",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior.",
+        "DISTINTIVO": "T",
+        "NUM_TOMAS": "2",
+        "NOTA_MONTAJE": ""
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 79; 09-93-17. T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior."
     },
     {
       "nombre": "IE_TN_EST110",
@@ -220,7 +298,7 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-TOMAS-NORMALES",
-      "forma": "toma_estanco",
+      "forma": "dge_toma",
       "montaje": "PARED",
       "datos": {
         "ALTURA": "+1.10 m",
@@ -228,9 +306,16 @@
         "CONFIGURACION": "2P+T",
         "ALIMENTACION": "NORMAL",
         "CORRIENTE": "",
-        "IP": ""
+        "IP": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-17 + 09-93-19",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior.",
+        "DISTINTIVO": "T/PA",
+        "NUM_TOMAS": "2",
+        "NOTA_MONTAJE": ""
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 79; 09-93-17 + 09-93-19. T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior."
     },
     {
       "nombre": "IE_TN_PISO",
@@ -239,7 +324,7 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-TOMAS-NORMALES",
-      "forma": "toma_piso",
+      "forma": "dge_toma_piso",
       "montaje": "PISO",
       "datos": {
         "ALTURA": "NPT +/-0.00",
@@ -247,9 +332,16 @@
         "CONFIGURACION": "2P+T",
         "ALIMENTACION": "NORMAL",
         "CORRIENTE": "",
-        "IP": ""
+        "IP": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-17 + 09-93-14",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior.",
+        "DISTINTIVO": "T",
+        "NUM_TOMAS": "2",
+        "NOTA_MONTAJE": ""
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 79; 09-93-17 + 09-93-14. T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior."
     },
     {
       "nombre": "IE_TN_MES110",
@@ -258,7 +350,7 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-TOMAS-NORMALES",
-      "forma": "toma_mesada",
+      "forma": "dge_toma",
       "montaje": "MESADA",
       "datos": {
         "ALTURA": "+1.10 m",
@@ -266,9 +358,16 @@
         "CONFIGURACION": "2P+T",
         "ALIMENTACION": "NORMAL",
         "CORRIENTE": "",
-        "IP": ""
+        "IP": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-17",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior.",
+        "DISTINTIVO": "T",
+        "NUM_TOMAS": "2",
+        "NOTA_MONTAJE": "MESADA"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 79; 09-93-17. T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior."
     },
     {
       "nombre": "IE_TN_MES120",
@@ -277,7 +376,7 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-TOMAS-NORMALES",
-      "forma": "toma_mesada",
+      "forma": "dge_toma",
       "montaje": "MESADA",
       "datos": {
         "ALTURA": "+1.20 m",
@@ -285,9 +384,16 @@
         "CONFIGURACION": "2P+T",
         "ALIMENTACION": "NORMAL",
         "CORRIENTE": "",
-        "IP": ""
+        "IP": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-17",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior.",
+        "DISTINTIVO": "T",
+        "NUM_TOMAS": "2",
+        "NOTA_MONTAJE": "MESADA"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 79; 09-93-17. T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior."
     },
     {
       "nombre": "IE_TN_TECHO",
@@ -296,7 +402,7 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-TOMAS-NORMALES",
-      "forma": "toma_techo",
+      "forma": "dge_toma",
       "montaje": "TECHO",
       "datos": {
         "ALTURA": "",
@@ -304,9 +410,16 @@
         "CONFIGURACION": "2P+T",
         "ALIMENTACION": "NORMAL",
         "CORRIENTE": "",
-        "IP": ""
+        "IP": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-17",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior.",
+        "DISTINTIVO": "T",
+        "NUM_TOMAS": "2",
+        "NOTA_MONTAJE": "TECHO"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 79; 09-93-17. T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior."
     },
     {
       "nombre": "IE_TE_M040",
@@ -315,7 +428,7 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-TOMAS-ESTABILIZADOS",
-      "forma": "toma_pared_est",
+      "forma": "dge_toma",
       "montaje": "PARED",
       "datos": {
         "ALTURA": "+0.40 m",
@@ -323,9 +436,16 @@
         "CONFIGURACION": "2P+T",
         "ALIMENTACION": "ESTABILIZADO",
         "CORRIENTE": "",
-        "IP": ""
+        "IP": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-17",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior.",
+        "DISTINTIVO": "T/E",
+        "NUM_TOMAS": "2",
+        "NOTA_MONTAJE": ""
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 79; 09-93-17. T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior."
     },
     {
       "nombre": "IE_TE_M120",
@@ -334,7 +454,7 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-TOMAS-ESTABILIZADOS",
-      "forma": "toma_pared_est",
+      "forma": "dge_toma",
       "montaje": "PARED",
       "datos": {
         "ALTURA": "+1.20 m",
@@ -342,9 +462,16 @@
         "CONFIGURACION": "2P+T",
         "ALIMENTACION": "ESTABILIZADO",
         "CORRIENTE": "",
-        "IP": ""
+        "IP": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-17",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior.",
+        "DISTINTIVO": "T/E",
+        "NUM_TOMAS": "2",
+        "NOTA_MONTAJE": ""
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 79; 09-93-17. T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior."
     },
     {
       "nombre": "IE_TE_PISO",
@@ -353,7 +480,7 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-TOMAS-ESTABILIZADOS",
-      "forma": "toma_piso_est",
+      "forma": "dge_toma_piso",
       "montaje": "PISO",
       "datos": {
         "ALTURA": "NPT +/-0.00",
@@ -361,9 +488,16 @@
         "CONFIGURACION": "2P+T",
         "ALIMENTACION": "ESTABILIZADO",
         "CORRIENTE": "",
-        "IP": ""
+        "IP": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-17 + 09-93-14",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior.",
+        "DISTINTIVO": "T/E",
+        "NUM_TOMAS": "2",
+        "NOTA_MONTAJE": ""
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 79; 09-93-17 + 09-93-14. T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior."
     },
     {
       "nombre": "IE_TE_AVTECHO",
@@ -372,7 +506,7 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-TOMAS-ESTABILIZADOS",
-      "forma": "toma_techo_est",
+      "forma": "dge_toma",
       "montaje": "TECHO",
       "datos": {
         "ALTURA": "",
@@ -380,9 +514,16 @@
         "CONFIGURACION": "2P+T",
         "ALIMENTACION": "ESTABILIZADO",
         "CORRIENTE": "",
-        "IP": ""
+        "IP": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-17",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior.",
+        "DISTINTIVO": "T/E",
+        "NUM_TOMAS": "2",
+        "NOTA_MONTAJE": "TECHO"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 79; 09-93-17. T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior."
     },
     {
       "nombre": "IE_TE_AV220",
@@ -391,7 +532,7 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-TOMAS-ESTABILIZADOS",
-      "forma": "toma_pared_est",
+      "forma": "dge_toma",
       "montaje": "PARED",
       "datos": {
         "ALTURA": "+2.20 m",
@@ -399,9 +540,16 @@
         "CONFIGURACION": "2P+T",
         "ALIMENTACION": "ESTABILIZADO",
         "CORRIENTE": "",
-        "IP": ""
+        "IP": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-17",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior.",
+        "DISTINTIVO": "T/E",
+        "NUM_TOMAS": "2",
+        "NOTA_MONTAJE": ""
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 79; 09-93-17. T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior."
     },
     {
       "nombre": "IE_TE_AV120",
@@ -410,7 +558,7 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-TOMAS-ESTABILIZADOS",
-      "forma": "toma_pared_est",
+      "forma": "dge_toma",
       "montaje": "PARED",
       "datos": {
         "ALTURA": "+1.20 m",
@@ -418,9 +566,16 @@
         "CONFIGURACION": "2P+T",
         "ALIMENTACION": "ESTABILIZADO",
         "CORRIENTE": "",
-        "IP": ""
+        "IP": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-17",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior.",
+        "DISTINTIVO": "T/E",
+        "NUM_TOMAS": "2",
+        "NOTA_MONTAJE": ""
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 79; 09-93-17. T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior."
     },
     {
       "nombre": "IE_TE_ESPECIAL",
@@ -429,7 +584,7 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-TOMAS-ESTABILIZADOS",
-      "forma": "toma_dedicado_est",
+      "forma": "dge_toma",
       "montaje": "POR DEFINIR",
       "datos": {
         "ALTURA": "",
@@ -437,9 +592,16 @@
         "CONFIGURACION": "2P+T",
         "ALIMENTACION": "ESTABILIZADO",
         "CORRIENTE": "",
-        "IP": ""
+        "IP": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-17",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior.",
+        "DISTINTIVO": "T/E",
+        "NUM_TOMAS": "2",
+        "NOTA_MONTAJE": ""
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 79; 09-93-17. T: tierra; PA: prueba de agua; E: alimentacion estabilizada, identificador de proyecto en leyenda. Sin rombo ni tierra exterior."
     },
     {
       "nombre": "IE_FUERZA",
@@ -448,15 +610,19 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-FUERZA",
-      "forma": "fuerza",
+      "forma": "dge_12",
       "montaje": "POR DEFINIR",
       "datos": {
         "TENSION": "",
         "FASES": "",
         "POTENCIA": "",
-        "EQUIPO": ""
+        "EQUIPO": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-12",
+        "PAGINA_DGE": "78",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Salida de potencia general. Fases y equipo se identifican por atributos; no se inventa una configuracion."
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 78; 09-93-12. Salida de potencia general. Fases y equipo se identifican por atributos; no se inventa una configuracion."
     },
     {
       "nombre": "IE_MECANICA",
@@ -465,15 +631,19 @@
       "sistema": "IE",
       "familia": "02_TOMACORRIENTES_FUERZA",
       "capa": "IE-FUERZA",
-      "forma": "mecanica",
+      "forma": "dge_12",
       "montaje": "POR DEFINIR",
       "datos": {
         "TENSION": "",
         "FASES": "",
         "POTENCIA": "",
-        "EQUIPO": ""
+        "EQUIPO": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-12",
+        "PAGINA_DGE": "78",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Salida de potencia general. Fases y equipo se identifican por atributos; no se inventa una configuracion."
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 78; 09-93-12. Salida de potencia general. Fases y equipo se identifican por atributos; no se inventa una configuracion."
     },
     {
       "nombre": "IE_CAJA_ILUMINACION",
@@ -488,9 +658,10 @@
         "DIMENSIONES": "",
         "MATERIAL": "",
         "IP": "",
-        "FUNCION": "ILUMINACION"
+        "FUNCION": "ILUMINACION",
+        "NORMA": "CONTORNO FISICO RECTANGULAR; distinto del simbolo general DGE 09-93-08"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "Contorno fisico solicitado por el usuario. Ver simbolos DGE 09-93-08 y 09-93-09 en catalogo normativo."
     },
     {
       "nombre": "IE_CAJA_TOMAS",
@@ -505,9 +676,10 @@
         "DIMENSIONES": "",
         "MATERIAL": "",
         "IP": "",
-        "FUNCION": "TOMAS"
+        "FUNCION": "TOMAS",
+        "NORMA": "CONTORNO FISICO RECTANGULAR; distinto del simbolo general DGE 09-93-08"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "Contorno fisico solicitado por el usuario. Ver simbolos DGE 09-93-08 y 09-93-09 en catalogo normativo."
     },
     {
       "nombre": "IE_CAJA_FUERZA",
@@ -522,9 +694,10 @@
         "DIMENSIONES": "",
         "MATERIAL": "",
         "IP": "",
-        "FUNCION": "FUERZA"
+        "FUNCION": "FUERZA",
+        "NORMA": "CONTORNO FISICO RECTANGULAR; distinto del simbolo general DGE 09-93-08"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "Contorno fisico solicitado por el usuario. Ver simbolos DGE 09-93-08 y 09-93-09 en catalogo normativo."
     },
     {
       "nombre": "IE_CAJA_DERIVACION",
@@ -539,9 +712,10 @@
         "DIMENSIONES": "",
         "MATERIAL": "",
         "IP": "",
-        "FUNCION": "DERIVACION"
+        "FUNCION": "DERIVACION",
+        "NORMA": "CONTORNO FISICO RECTANGULAR; distinto del simbolo general DGE 09-93-08"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "Contorno fisico solicitado por el usuario. Ver simbolos DGE 09-93-08 y 09-93-09 en catalogo normativo."
     },
     {
       "nombre": "IE_CAJA_PARED",
@@ -556,9 +730,10 @@
         "DIMENSIONES": "",
         "MATERIAL": "",
         "IP": "",
-        "FUNCION": "PARED"
+        "FUNCION": "PARED",
+        "NORMA": "CONTORNO FISICO RECTANGULAR; distinto del simbolo general DGE 09-93-08"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "Contorno fisico solicitado por el usuario. Ver simbolos DGE 09-93-08 y 09-93-09 en catalogo normativo."
     },
     {
       "nombre": "IE_CAJA_TECHO",
@@ -573,9 +748,10 @@
         "DIMENSIONES": "",
         "MATERIAL": "",
         "IP": "",
-        "FUNCION": "TECHO"
+        "FUNCION": "TECHO",
+        "NORMA": "CONTORNO FISICO RECTANGULAR; distinto del simbolo general DGE 09-93-08"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "Contorno fisico solicitado por el usuario. Ver simbolos DGE 09-93-08 y 09-93-09 en catalogo normativo."
     },
     {
       "nombre": "IE_CAJA_ESPECIAL",
@@ -590,9 +766,10 @@
         "DIMENSIONES": "",
         "MATERIAL": "",
         "IP": "",
-        "FUNCION": "ESPECIAL"
+        "FUNCION": "ESPECIAL",
+        "NORMA": "CONTORNO FISICO RECTANGULAR; distinto del simbolo general DGE 09-93-08"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "Contorno fisico solicitado por el usuario. Ver simbolos DGE 09-93-08 y 09-93-09 en catalogo normativo."
     },
     {
       "nombre": "IE_TABLERO_GENERAL",
@@ -601,14 +778,18 @@
       "sistema": "IE",
       "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
       "capa": "IE-TABLERO",
-      "forma": "tablero_general",
+      "forma": "dge_panel",
       "montaje": "POR DEFINIR",
       "datos": {
         "TENSION": "",
         "POTENCIA": "",
-        "CORRIENTE": ""
+        "CORRIENTE": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-91-16",
+        "PAGINA_DGE": "76",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Simbolo base cotejado visualmente con la lamina DGE"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 76; 09-91-16. Simbolo base cotejado visualmente con la lamina DGE"
     },
     {
       "nombre": "IE_TABLERO_DISTRIBUCION",
@@ -617,14 +798,18 @@
       "sistema": "IE",
       "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
       "capa": "IE-TABLERO",
-      "forma": "tablero_distribucion",
+      "forma": "dge_panel",
       "montaje": "POR DEFINIR",
       "datos": {
         "TENSION": "",
         "POTENCIA": "",
-        "CORRIENTE": ""
+        "CORRIENTE": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-91-16",
+        "PAGINA_DGE": "76",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Simbolo base cotejado visualmente con la lamina DGE"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 76; 09-91-16. Simbolo base cotejado visualmente con la lamina DGE"
     },
     {
       "nombre": "IE_TABLERO_UPS",
@@ -649,10 +834,15 @@
       "sistema": "IE",
       "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
       "capa": "IE-CODIGOS",
-      "forma": "sube",
+      "forma": "dge_05",
       "montaje": "POR DEFINIR",
-      "datos": {},
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-05",
+        "PAGINA_DGE": "78",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Simbolo base cotejado visualmente con la lamina DGE"
+      },
+      "fuente": "DGE seccion 9, p. 78; 09-93-05. Simbolo base cotejado visualmente con la lamina DGE"
     },
     {
       "nombre": "IE_BAJA",
@@ -661,10 +851,15 @@
       "sistema": "IE",
       "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
       "capa": "IE-CODIGOS",
-      "forma": "baja",
+      "forma": "dge_06",
       "montaje": "POR DEFINIR",
-      "datos": {},
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-06",
+        "PAGINA_DGE": "78",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Simbolo base cotejado visualmente con la lamina DGE"
+      },
+      "fuente": "DGE seccion 9, p. 78; 09-93-06. Simbolo base cotejado visualmente con la lamina DGE"
     },
     {
       "nombre": "IE_SUBE_BAJA",
@@ -673,10 +868,15 @@
       "sistema": "IE",
       "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
       "capa": "IE-CODIGOS",
-      "forma": "sube_baja",
+      "forma": "dge_07",
       "montaje": "POR DEFINIR",
-      "datos": {},
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-07",
+        "PAGINA_DGE": "78",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Simbolo base cotejado visualmente con la lamina DGE"
+      },
+      "fuente": "DGE seccion 9, p. 78; 09-93-07. Simbolo base cotejado visualmente con la lamina DGE"
     },
     {
       "nombre": "IE_TIERRA",
@@ -709,15 +909,20 @@
       "sistema": "IC",
       "familia": "04_DATA_COMUNICACIONES",
       "capa": "IC-DATA",
-      "forma": "data_1",
+      "forma": "dge_27",
       "montaje": "PARED",
       "datos": {
         "PUNTO": "",
         "CABLE": "",
         "PUERTOS": "1",
-        "CATEGORIA": ""
+        "CATEGORIA": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-27",
+        "PAGINA_DGE": "80",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Base general de telecomunicaciones. D/2D/VD/FO/FI son designaciones del proyecto; TP figura en DGE.",
+        "DISTINTIVO": "D"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 80; 09-93-27. Base general de telecomunicaciones. D/2D/VD/FO/FI son designaciones del proyecto; TP figura en DGE."
     },
     {
       "nombre": "IC_DATA_DOBLE",
@@ -726,15 +931,20 @@
       "sistema": "IC",
       "familia": "04_DATA_COMUNICACIONES",
       "capa": "IC-DATA",
-      "forma": "data_2",
+      "forma": "dge_27",
       "montaje": "PARED",
       "datos": {
         "PUNTO": "",
         "CABLE": "",
         "PUERTOS": "2",
-        "CATEGORIA": "CAT 6A"
+        "CATEGORIA": "CAT 6A",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-27",
+        "PAGINA_DGE": "80",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Base general de telecomunicaciones. D/2D/VD/FO/FI son designaciones del proyecto; TP figura en DGE.",
+        "DISTINTIVO": "2D"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 80; 09-93-27. Base general de telecomunicaciones. D/2D/VD/FO/FI son designaciones del proyecto; TP figura en DGE."
     },
     {
       "nombre": "IC_VOZ",
@@ -743,14 +953,19 @@
       "sistema": "IC",
       "familia": "04_DATA_COMUNICACIONES",
       "capa": "IC-VOZ",
-      "forma": "voz",
+      "forma": "dge_27",
       "montaje": "PARED",
       "datos": {
         "PUNTO": "",
         "CABLE": "",
-        "PUERTOS": "1"
+        "PUERTOS": "1",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-27",
+        "PAGINA_DGE": "80",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Base general de telecomunicaciones. D/2D/VD/FO/FI son designaciones del proyecto; TP figura en DGE.",
+        "DISTINTIVO": "TP"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 80; 09-93-27. Base general de telecomunicaciones. D/2D/VD/FO/FI son designaciones del proyecto; TP figura en DGE."
     },
     {
       "nombre": "IC_VOZ_DATA",
@@ -759,14 +974,19 @@
       "sistema": "IC",
       "familia": "04_DATA_COMUNICACIONES",
       "capa": "IC-VOZ",
-      "forma": "voz_data",
+      "forma": "dge_27",
       "montaje": "PARED",
       "datos": {
         "PUNTO": "",
         "CABLE": "",
-        "PUERTOS": "2"
+        "PUERTOS": "2",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-27",
+        "PAGINA_DGE": "80",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Base general de telecomunicaciones. D/2D/VD/FO/FI son designaciones del proyecto; TP figura en DGE.",
+        "DISTINTIVO": "VD"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 80; 09-93-27. Base general de telecomunicaciones. D/2D/VD/FO/FI son designaciones del proyecto; TP figura en DGE."
     },
     {
       "nombre": "IC_AP",
@@ -865,13 +1085,17 @@
       "sistema": "IC",
       "familia": "04_DATA_COMUNICACIONES",
       "capa": "IC-ACCESOS",
-      "forma": "cerradura",
+      "forma": "dge_72",
       "montaje": "PUERTA",
       "datos": {
         "PUNTO": "",
-        "CABLE": ""
+        "CABLE": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-72",
+        "PAGINA_DGE": "84",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Cerradura electrica general; tipo electromagnetico en atributos."
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 84; 09-93-72. Cerradura electrica general; tipo electromagnetico en atributos."
     },
     {
       "nombre": "IC_PULSADOR",
@@ -978,15 +1202,20 @@
       "sistema": "IC",
       "familia": "04_DATA_COMUNICACIONES",
       "capa": "IC-FIBRA",
-      "forma": "fibra",
+      "forma": "dge_27",
       "montaje": "POR DEFINIR",
       "datos": {
         "PUNTO": "",
         "CABLE": "",
         "FIBRAS": "",
-        "CONECTOR": ""
+        "CONECTOR": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-27",
+        "PAGINA_DGE": "80",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Base general de telecomunicaciones. D/2D/VD/FO/FI son designaciones del proyecto; TP figura en DGE.",
+        "DISTINTIVO": "FO"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 80; 09-93-27. Base general de telecomunicaciones. D/2D/VD/FO/FI son designaciones del proyecto; TP figura en DGE."
     },
     {
       "nombre": "IC_FO_INTERCONEXION",
@@ -995,14 +1224,19 @@
       "sistema": "IC",
       "familia": "04_DATA_COMUNICACIONES",
       "capa": "IC-FIBRA",
-      "forma": "fibra_interconexion",
+      "forma": "dge_27",
       "montaje": "POR DEFINIR",
       "datos": {
         "PUNTO": "",
         "CABLE": "",
-        "FIBRAS": ""
+        "FIBRAS": "",
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-27",
+        "PAGINA_DGE": "80",
+        "CLASE_REFERENCIA": "BASE DGE + DATOS DE PROYECTO",
+        "OBSERVACIONES": "Base general de telecomunicaciones. D/2D/VD/FO/FI son designaciones del proyecto; TP figura en DGE.",
+        "DISTINTIVO": "FI"
       },
-      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+      "fuente": "DGE seccion 9, p. 80; 09-93-27. Base general de telecomunicaciones. D/2D/VD/FO/FI son designaciones del proyecto; TP figura en DGE."
     },
     {
       "nombre": "DACI_HUMO",
@@ -1291,6 +1525,626 @@
         "DIMENSIONES": ""
       },
       "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_DGE_08",
+      "codigo": "09-93-08",
+      "descripcion": "Caja, simbolo general",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_08",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-08",
+        "PAGINA_DGE": "78",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 78, 09-93-08. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_09",
+      "codigo": "09-93-09",
+      "descripcion": "Caja de conexion / derivacion",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_09",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-09",
+        "PAGINA_DGE": "78",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 78, 09-93-09. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_12",
+      "codigo": "09-93-12",
+      "descripcion": "Salida de potencia, simbolo general",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_12",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-12",
+        "PAGINA_DGE": "78",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 78, 09-93-12. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_13",
+      "codigo": "09-93-13",
+      "descripcion": "Tomacorriente monofasico",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_toma",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-13",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 79, 09-93-13. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_14",
+      "codigo": "09-93-14",
+      "descripcion": "Tomacorriente monofasico en piso",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_toma_piso",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-14",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 79, 09-93-14. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_15",
+      "codigo": "09-93-15",
+      "descripcion": "Tomacorriente trifasico",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_toma_3f",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-15",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 79, 09-93-15. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_16",
+      "codigo": "09-93-16",
+      "descripcion": "Tomacorriente trifasico en piso",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_toma_3f_piso",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-16",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 79, 09-93-16. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_17",
+      "codigo": "09-93-17",
+      "descripcion": "Tomacorriente monofasico puesto a tierra",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_toma",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-17",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": "T"
+      },
+      "fuente": "DGE seccion 9, pagina impresa 79, 09-93-17. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_19",
+      "codigo": "09-93-19",
+      "descripcion": "Tomacorriente a prueba de agua",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_toma",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-19",
+        "PAGINA_DGE": "79",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": "PA"
+      },
+      "fuente": "DGE seccion 9, pagina impresa 79, 09-93-19. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_27",
+      "codigo": "09-93-27",
+      "descripcion": "Salida de telecomunicaciones, general",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_27",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-27",
+        "PAGINA_DGE": "80",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 80, 09-93-27. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_28",
+      "codigo": "09-93-28",
+      "descripcion": "Interruptor, simbolo general",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_28",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-28",
+        "PAGINA_DGE": "80",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 80, 09-93-28. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_29",
+      "codigo": "09-93-29",
+      "descripcion": "Interruptor con lampara piloto",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_SL",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-29",
+        "PAGINA_DGE": "80",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": "",
+        "GIRO_GRAFICO": "FIJO_LEGIBLE"
+      },
+      "fuente": "DGE seccion 9, pagina impresa 80, 09-93-29. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_30",
+      "codigo": "09-93-30",
+      "descripcion": "Interruptor unipolar, variante S",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_S",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-30",
+        "PAGINA_DGE": "80",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": "",
+        "GIRO_GRAFICO": "FIJO_LEGIBLE"
+      },
+      "fuente": "DGE seccion 9, pagina impresa 80, 09-93-30. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_31",
+      "codigo": "09-93-31",
+      "descripcion": "Interruptor bipolar, variante S2",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_S2",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-31",
+        "PAGINA_DGE": "81",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": "",
+        "GIRO_GRAFICO": "FIJO_LEGIBLE"
+      },
+      "fuente": "DGE seccion 9, pagina impresa 81, 09-93-31. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_32",
+      "codigo": "09-93-32",
+      "descripcion": "Interruptor de tres vias",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_S3",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-32",
+        "PAGINA_DGE": "81",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": "",
+        "GIRO_GRAFICO": "FIJO_LEGIBLE"
+      },
+      "fuente": "DGE seccion 9, pagina impresa 81, 09-93-32. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_33",
+      "codigo": "09-93-33",
+      "descripcion": "Interruptor de cuatro vias",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_S4",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-33",
+        "PAGINA_DGE": "81",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": "",
+        "GIRO_GRAFICO": "FIJO_LEGIBLE"
+      },
+      "fuente": "DGE seccion 9, pagina impresa 81, 09-93-33. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_35",
+      "codigo": "09-93-35",
+      "descripcion": "Interruptor unipolar de dos vias",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_35",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-35",
+        "PAGINA_DGE": "81",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 81, 09-93-35. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_36",
+      "codigo": "09-93-36",
+      "descripcion": "Conmutador intermedio",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_36",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-36",
+        "PAGINA_DGE": "81",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 81, 09-93-36. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_37",
+      "codigo": "09-93-37",
+      "descripcion": "Interruptor graduador",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_37",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-37",
+        "PAGINA_DGE": "81",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 81, 09-93-37. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_38",
+      "codigo": "09-93-38",
+      "descripcion": "Interruptor con tirador",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_ST",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-38",
+        "PAGINA_DGE": "81",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": "",
+        "GIRO_GRAFICO": "FIJO_LEGIBLE"
+      },
+      "fuente": "DGE seccion 9, pagina impresa 81, 09-93-38. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_39",
+      "codigo": "09-93-39",
+      "descripcion": "Interruptor de puerta",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_SP",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-39",
+        "PAGINA_DGE": "81",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": "",
+        "GIRO_GRAFICO": "FIJO_LEGIBLE"
+      },
+      "fuente": "DGE seccion 9, pagina impresa 81, 09-93-39. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_42",
+      "codigo": "09-93-42",
+      "descripcion": "Pulsador / contactor no de senalizacion",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_SC",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-42",
+        "PAGINA_DGE": "82",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": "",
+        "GIRO_GRAFICO": "FIJO_LEGIBLE"
+      },
+      "fuente": "DGE seccion 9, pagina impresa 82, 09-93-42. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_43",
+      "codigo": "09-93-43",
+      "descripcion": "Boton de presion",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_43",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-43",
+        "PAGINA_DGE": "82",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 82, 09-93-43. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_44",
+      "codigo": "09-93-44",
+      "descripcion": "Boton con lampara indicadora",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_44",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-44",
+        "PAGINA_DGE": "82",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 82, 09-93-44. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_51",
+      "codigo": "09-93-51",
+      "descripcion": "Salida de luz adosada en techo",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_51",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-51",
+        "PAGINA_DGE": "82",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 82, 09-93-51. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_52",
+      "codigo": "09-93-52",
+      "descripcion": "Salida de luz adosada en pared",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_52",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-52",
+        "PAGINA_DGE": "82",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 82, 09-93-52. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_53",
+      "codigo": "09-93-53",
+      "descripcion": "Salida de luz empotrada en techo",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_53",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-53",
+        "PAGINA_DGE": "82",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 82, 09-93-53. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_54",
+      "codigo": "09-93-54",
+      "descripcion": "Salida de luz empotrada en pared",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_54",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-54",
+        "PAGINA_DGE": "83",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 83, 09-93-54. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_55",
+      "codigo": "09-93-55",
+      "descripcion": "Salida fluorescente en techo",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_55",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-55",
+        "PAGINA_DGE": "83",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 83, 09-93-55. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_56",
+      "codigo": "09-93-56",
+      "descripcion": "Salida fluorescente empotrada",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_56",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-56",
+        "PAGINA_DGE": "83",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 83, 09-93-56. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_59",
+      "codigo": "09-93-59",
+      "descripcion": "Lampara, simbolo general",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_59",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-59",
+        "PAGINA_DGE": "83",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 83, 09-93-59. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_60",
+      "codigo": "09-93-60",
+      "descripcion": "Luminaria, simbolo general",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_60",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-60",
+        "PAGINA_DGE": "83",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 83, 09-93-60. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_61",
+      "codigo": "09-93-61",
+      "descripcion": "Luminaria de tres tubos fluorescentes",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_61",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-61",
+        "PAGINA_DGE": "83",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 83, 09-93-61. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_67",
+      "codigo": "09-93-67",
+      "descripcion": "Luminaria de emergencia",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_67",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-67",
+        "PAGINA_DGE": "84",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 84, 09-93-67. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_68",
+      "codigo": "09-93-68",
+      "descripcion": "Luminaria autonoma de emergencia",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_68",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-68",
+        "PAGINA_DGE": "84",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 84, 09-93-68. Figura cotejada; sin puntos de la reticula auxiliar."
+    },
+    {
+      "nombre": "IE_DGE_72",
+      "codigo": "09-93-72",
+      "descripcion": "Cerradura electrica",
+      "sistema": "IE",
+      "familia": "08_BASE_DGE",
+      "capa": "IE-LEYENDA",
+      "forma": "dge_72",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "NORMA": "DGE RM 091-2002-EM/VME; 09-93-72",
+        "PAGINA_DGE": "84",
+        "CLASE_REFERENCIA": "SIMBOLO DGE COTEJADO",
+        "DISTINTIVO": ""
+      },
+      "fuente": "DGE seccion 9, pagina impresa 84, 09-93-72. Figura cotejada; sin puntos de la reticula auxiliar."
     }
   ],
   "rutas": [
@@ -1633,5 +2487,5 @@
   ],
   "luminarias_pendientes": 9,
   "bloques_dinamicos_nativos": false,
-  "estado_normativo": "Convenciones de proyecto; fuentes normativas originales no disponibles"
+  "estado_normativo": "Cotejo DGE por simbolo; referencias no comprobadas identificadas por separado"
 }

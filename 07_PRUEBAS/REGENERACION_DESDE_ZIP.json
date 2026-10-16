@@ -1,10 +1,11 @@
 {
-  "origen": "FUENTES extraidas del ZIP de entrega",
+  "origen": "FUENTES del ZIP 2.0-DGE",
   "scripts": [
     "corregir_base.py",
     "generar.py",
     "verificar.py",
     "empaquetar.py"
   ],
-  "resultado": "todos ejecutados correctamente desde el paquete portable"
+  "DXF_principal_SHA256": "58030c28d251368a1b8ba8d1041615c9781c8e5d3fc34e4ac0fc3f5686356ae9",
+  "resultado": "regeneracion completa de la revision DGE ejecutada correctamente"
 }

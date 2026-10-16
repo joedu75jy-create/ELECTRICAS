@@ -2,8 +2,8 @@
   "dxf": [
     {
       "archivo": "11_PLANTILLA_GENERAL_INTEGRADA/PLANTILLA_GENERAL_INTEGRADA.dxf",
-      "entidades_modelo": 537,
-      "bloques": 117,
+      "entidades_modelo": 734,
+      "bloques": 125,
       "capas": 45,
       "errores": 0,
       "reparaciones": 0
@@ -18,15 +18,15 @@
     },
     {
       "archivo": "02_BIBLIOTECA_BLOQUES/BIBLIOTECA_ELECTRICIDAD.dxf",
-      "entidades_modelo": 241,
-      "bloques": 49,
+      "entidades_modelo": 436,
+      "bloques": 87,
       "capas": 45,
       "errores": 0,
       "reparaciones": 0
     },
     {
       "archivo": "09_DATA_COMUNICACIONES/BIBLIOTECA_COMUNICACIONES.dxf",
-      "entidades_modelo": 101,
+      "entidades_modelo": 102,
       "bloques": 22,
       "capas": 45,
       "errores": 0,
@@ -34,7 +34,7 @@
     },
     {
       "archivo": "10_ALARMA_CONTRAINCENDIOS/BIBLIOTECA_DACI.dxf",
-      "entidades_modelo": 87,
+      "entidades_modelo": 88,
       "bloques": 19,
       "capas": 45,
       "errores": 0,
@@ -42,16 +42,34 @@
     }
   ],
   "biblioteca": {
-    "bloques_nuevos": 79,
-    "bloques_heredados_JY": 30,
+    "bloques_nuevos": 115,
+    "bloques_heredados_JY": 0,
     "por_sistema": {
-      "IE": 44,
+      "IE": 80,
       "IC": 19,
       "DACI": 16
     },
     "cajas_rectangulares": 9,
-    "luminarias": 4,
-    "luminarias_pendientes": 9
+    "luminarias_modelos_documentados": 4,
+    "luminarias_pendientes": 9,
+    "simbolos_base_DGE": 36
+  },
+  "revision_DGE": {
+    "documento": "Seccion 9, copia consultada y contrastada con ficha oficial MINEM",
+    "pagina_impresa": [
+      76,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84
+    ],
+    "tomas_monofasicas": "dos rayas y T; no tres rayas trifasicas ni tierra exterior",
+    "estabilizados": "sin rombo; E como identificacion en leyenda",
+    "interruptores": "S con grupos de control; bipolar S2 separado de dos teclas independientes",
+    "cotejo": "visual documental, no certificacion de toda la biblioteca IC/DACI"
   },
   "autolisp": [
     {
@@ -110,13 +128,13 @@
   "pdf": [
     {
       "archivo": "CATALOGO_INTEGRADO.pdf",
-      "paginas": 7,
+      "paginas": 9,
       "formato": "A3",
       "paginas_no_vacias": true
     },
     {
       "archivo": "CATALOGO_MONOCROMO.pdf",
-      "paginas": 7,
+      "paginas": 9,
       "formato": "A3",
       "paginas_no_vacias": true
     }
@@ -124,7 +142,7 @@
   "pendientes": [
     "Apertura y ploteo en AutoCAD",
     "Ejecucion real de rutinas AutoLISP y panel DCL",
-    "Verificacion normativa con fuentes originales y proyecto",
+    "Referencia especifica para sensores, dispositivos IC/DACI y variantes de proyecto",
     "Identificacion de 9 luminarias del registro no aportado",
     "DWG/DWT y dinamicos nativos: no generados"
   ],

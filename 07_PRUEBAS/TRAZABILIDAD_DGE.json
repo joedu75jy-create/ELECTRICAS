@@ -1,0 +1,19 @@
+{
+  "documento": "Norma DGE - Simbolos Graficos en Electricidad - Seccion 9",
+  "publicador_original": "MINEM, Direccion General de Electricidad",
+  "ficha_oficial": "https://www.gob.pe/institucion/minem/normas-legales/108773-0091-2002-mem",
+  "copia_consultada": "https://github.com/gaelrenzo/instalacion-electricas/blob/3619a7f06e64488628182d915e9d85e87d1515a5/referencias/normativa/pdf/simbologia-dge-seccion-9.pdf",
+  "sha256": "86b012217cc08e1e0a4ddfc045fdc81564607c992a233241e457ed63d8ff3506",
+  "paginas_pdf": 17,
+  "paginas_impresas_cotejadas": [
+    76,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84
+  ],
+  "nota": "Espejo del documento, no descarga directa del servidor oficial. No se utilizo codigo ni geometria de otro proyecto."
+}

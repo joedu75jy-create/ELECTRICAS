@@ -68,13 +68,15 @@ def main():
         'RESULTADOS_PRUEBAS.json':report}
     regeneration=ROOT/'07_PRUEBAS'/'REGENERACION_DESDE_ZIP.json'
     if regeneration.exists():files['REGENERACION_DESDE_ZIP.json']=regeneration
+    trace=ROOT/'07_PRUEBAS'/'TRAZABILIDAD_DGE.json'
+    if trace.exists():files['TRAZABILIDAD_DGE.json']=trace
     for name in ('ELECTRICAS.lsp','EI_CATALOGO.lsp','ELECTRICAS.dcl','INICIAR.scr'):
         files[name]=ROOT/'04_AUTOLISP'/name
     for name in ('EIC_METROS.lin','EIC_MILIMETROS.lin','ELECTRICAS_MONO.ctb'):
         files[name]=ROOT/'03_TIPOS_LINEA'/name
     for name,src in files.items():shutil.copyfile(src,stage/name)
     guia_pdf(ROOT/'05_CATALOGOS'/'GUIA_DE_USO.md',stage/'GUIA_DE_USO.pdf')
-    quick='''ELECTRICAS INTEGRADA v1.0 - INICIO RAPIDO
+    quick='''ELECTRICAS INTEGRADA v2.0-DGE - INICIO RAPIDO
 
 1. Descomprima TODO el ZIP en una carpeta local.
 2. Abra PLANTILLA_GENERAL_INTEGRADA.dxf y guarde su proyecto como DWG.
@@ -82,14 +84,15 @@ def main():
 4. EICONFIG configura lineas; EIESCALA establece 50, 75 o 100.
 5. EI abre el panel de las tres especialidades. Coloque, gire y asigne el codigo.
 
-Una sola plantilla. Siete layouts de catalogo dentro del mismo archivo.
+Una sola plantilla. Nueve layouts de catalogo dentro del mismo archivo.
 Modelo en METROS. Bloques simbolicos con atributos editables.
 EIEDITA: atributos | EIGIRA: giro | EINUMERA: numeracion | EIRUTA: canalizaciones.
 Mantenga juntos LSP, EI_CATALOGO.lsp y DCL. EIAYUDA muestra todos los comandos.
 
-Incluye 79 bloques nuevos (44 IE, 19 IC, 16 DACI), 30 definiciones heredadas y 42 rutas.
+Incluye biblioteca corregida, 36 simbolos base DGE adicionales y 42 rutas.
 Solo L-01 a L-04 estan documentadas; faltan referencias para 9 luminarias.
-Geometria identificada como convencion de proyecto; cotejo normativo pendiente.
+DGE seccion 9 cotejada por simbolo: consulte referencia y pagina en el CSV y los atributos.
+Sensores y dispositivos IC/DACI sin fuente especifica siguen identificados como pendientes.
 DXF y pruebas de estructura ejecutadas. AutoLISP, apertura e impresion pendientes de AutoCAD.
 No contiene DWG/DWT ni bloques dinamicos nativos generados o verificados.
 
@@ -121,6 +124,8 @@ FUENTES/: codigo y referencia original para regenerar y continuar el trabajo.
         assert principal.name in z.namelist()
         assert len([n for n in z.namelist() if n.lower().endswith('.dxf')])==1,'El paquete de uso debe tener un solo DXF principal.'
         for name,digest in checksums.items():assert hashlib.sha256(z.read(name)).hexdigest()==digest
+    if log.get('revision_DGE'):
+        shutil.copyfile(zip_path,zip_path.with_name('ELECTRICAS_INTEGRADA_DGE_v2.zip'))
     print(json.dumps({'zip':str(zip_path),'bytes':zip_path.stat().st_size,'archivos':len(checksums)+1,
                       'sha256':hashlib.sha256(zip_path.read_bytes()).hexdigest()},indent=2))
 
