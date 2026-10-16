@@ -1,0 +1,3 @@
+(load "ELECTRICAS.lsp")
+(c:EICONFIG)
+(c:EIAYUDA)

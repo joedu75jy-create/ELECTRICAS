@@ -1,0 +1,132 @@
+{
+  "dxf": [
+    {
+      "archivo": "11_PLANTILLA_GENERAL_INTEGRADA/PLANTILLA_GENERAL_INTEGRADA.dxf",
+      "entidades_modelo": 537,
+      "bloques": 117,
+      "capas": 45,
+      "errores": 0,
+      "reparaciones": 0
+    },
+    {
+      "archivo": "01_PLANTILLA_MAESTRA/BASE_IE_CORREGIDA.dxf",
+      "entidades_modelo": 100,
+      "bloques": 32,
+      "capas": 35,
+      "errores": 0,
+      "reparaciones": 0
+    },
+    {
+      "archivo": "02_BIBLIOTECA_BLOQUES/BIBLIOTECA_ELECTRICIDAD.dxf",
+      "entidades_modelo": 241,
+      "bloques": 49,
+      "capas": 45,
+      "errores": 0,
+      "reparaciones": 0
+    },
+    {
+      "archivo": "09_DATA_COMUNICACIONES/BIBLIOTECA_COMUNICACIONES.dxf",
+      "entidades_modelo": 101,
+      "bloques": 22,
+      "capas": 45,
+      "errores": 0,
+      "reparaciones": 0
+    },
+    {
+      "archivo": "10_ALARMA_CONTRAINCENDIOS/BIBLIOTECA_DACI.dxf",
+      "entidades_modelo": 87,
+      "bloques": 19,
+      "capas": 45,
+      "errores": 0,
+      "reparaciones": 0
+    }
+  ],
+  "biblioteca": {
+    "bloques_nuevos": 79,
+    "bloques_heredados_JY": 30,
+    "por_sistema": {
+      "IE": 44,
+      "IC": 19,
+      "DACI": 16
+    },
+    "cajas_rectangulares": 9,
+    "luminarias": 4,
+    "luminarias_pendientes": 9
+  },
+  "autolisp": [
+    {
+      "archivo": "EI_CATALOGO.lsp",
+      "expresiones": 3,
+      "funciones": 0,
+      "estado": "analisis estatico; no ejecutado en AutoCAD"
+    },
+    {
+      "archivo": "JY_CONTROLES_CORREGIDO.lsp",
+      "expresiones": 17,
+      "funciones": 13,
+      "estado": "analisis estatico; no ejecutado en AutoCAD"
+    },
+    {
+      "archivo": "ELECTRICAS.lsp",
+      "expresiones": 42,
+      "funciones": 39,
+      "estado": "analisis estatico; no ejecutado en AutoCAD"
+    }
+  ],
+  "tipos_linea": {
+    "definiciones_por_unidad": 42,
+    "unidades": [
+      "m",
+      "mm"
+    ],
+    "compilacion": "correcta"
+  },
+  "ctb": {
+    "colores_aci_negros": 255,
+    "lectura_binaria": "correcta"
+  },
+  "escalas": {
+    "escalas": [
+      50,
+      75,
+      100
+    ],
+    "giros": [
+      0,
+      90,
+      180,
+      270
+    ],
+    "referencias": 48,
+    "altura_texto_impresa_mm": 2.5,
+    "estado": "geometria DXF comprobada; interaccion EIGIRA pendiente de AutoCAD"
+  },
+  "conversion": {
+    "metros_a_mm": 1000,
+    "mm_a_m": 0.001,
+    "retorno_coordenadas": "correcto",
+    "retorno_atributos": "correcto"
+  },
+  "pdf": [
+    {
+      "archivo": "CATALOGO_INTEGRADO.pdf",
+      "paginas": 7,
+      "formato": "A3",
+      "paginas_no_vacias": true
+    },
+    {
+      "archivo": "CATALOGO_MONOCROMO.pdf",
+      "paginas": 7,
+      "formato": "A3",
+      "paginas_no_vacias": true
+    }
+  ],
+  "pendientes": [
+    "Apertura y ploteo en AutoCAD",
+    "Ejecucion real de rutinas AutoLISP y panel DCL",
+    "Verificacion normativa con fuentes originales y proyecto",
+    "Identificacion de 9 luminarias del registro no aportado",
+    "DWG/DWT y dinamicos nativos: no generados"
+  ],
+  "resultado": "CORRECTO EN LAS PRUEBAS EJECUTADAS; pendientes detallados por separado"
+}

@@ -1,0 +1,1637 @@
+{
+  "version": "1.0",
+  "unidades_modelo": "m",
+  "geometria_bloque": "mm en papel; unidades de bloque=0",
+  "factor_insercion_m": "escala / 1000",
+  "factor_insercion_mm": "escala",
+  "bloques": [
+    {
+      "nombre": "IE_L01",
+      "codigo": "L-01",
+      "descripcion": "LED lineal hermetica IP65",
+      "sistema": "IE",
+      "familia": "01_ILUMINACION_CONTROLES",
+      "capa": "IE-LUMINARIAS",
+      "forma": "luz_lineal",
+      "montaje": "POR CONFIRMAR",
+      "datos": {
+        "POTENCIA": "",
+        "IP": "IP65",
+        "DIM_FISICA": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_L02",
+      "codigo": "L-02",
+      "descripcion": "Aplique circular de pared IP65",
+      "sistema": "IE",
+      "familia": "01_ILUMINACION_CONTROLES",
+      "capa": "IE-LUMINARIAS",
+      "forma": "luz_aplique",
+      "montaje": "PARED",
+      "datos": {
+        "POTENCIA": "",
+        "IP": "IP65",
+        "DIM_FISICA": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_L03",
+      "codigo": "L-03",
+      "descripcion": "Panel LED nominal 600 x 600 mm",
+      "sistema": "IE",
+      "familia": "01_ILUMINACION_CONTROLES",
+      "capa": "IE-LUMINARIAS",
+      "forma": "luz_panel",
+      "montaje": "EMPOTRADO",
+      "datos": {
+        "POTENCIA": "",
+        "DIM_FISICA": "600x600 mm"
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_L04",
+      "codigo": "L-04",
+      "descripcion": "Downlight LED empotrado",
+      "sistema": "IE",
+      "familia": "01_ILUMINACION_CONTROLES",
+      "capa": "IE-LUMINARIAS",
+      "forma": "luz_downlight",
+      "montaje": "EMPOTRADO",
+      "datos": {
+        "POTENCIA": "",
+        "DIM_FISICA": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_SIMPLE",
+      "codigo": "IS",
+      "descripcion": "Interruptor simple",
+      "sistema": "IE",
+      "familia": "01_ILUMINACION_CONTROLES",
+      "capa": "IE-INTERRUPTORES",
+      "forma": "control_1",
+      "montaje": "POR DEFINIR",
+      "datos": {},
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_DOBLE",
+      "codigo": "ID",
+      "descripcion": "Interruptor doble",
+      "sistema": "IE",
+      "familia": "01_ILUMINACION_CONTROLES",
+      "capa": "IE-INTERRUPTORES",
+      "forma": "control_2",
+      "montaje": "POR DEFINIR",
+      "datos": {},
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TRIPLE",
+      "codigo": "IT",
+      "descripcion": "Interruptor triple",
+      "sistema": "IE",
+      "familia": "01_ILUMINACION_CONTROLES",
+      "capa": "IE-INTERRUPTORES",
+      "forma": "control_3",
+      "montaje": "POR DEFINIR",
+      "datos": {},
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_CONMUTACION",
+      "codigo": "IC",
+      "descripcion": "Interruptor de conmutacion",
+      "sistema": "IE",
+      "familia": "01_ILUMINACION_CONTROLES",
+      "capa": "IE-INTERRUPTORES",
+      "forma": "control_conmuta",
+      "montaje": "POR DEFINIR",
+      "datos": {},
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_CRUCE",
+      "codigo": "IX",
+      "descripcion": "Interruptor de cruce",
+      "sistema": "IE",
+      "familia": "01_ILUMINACION_CONTROLES",
+      "capa": "IE-INTERRUPTORES",
+      "forma": "control_cruce",
+      "montaje": "POR DEFINIR",
+      "datos": {},
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_PULSADOR",
+      "codigo": "PU",
+      "descripcion": "Pulsador",
+      "sistema": "IE",
+      "familia": "01_ILUMINACION_CONTROLES",
+      "capa": "IE-INTERRUPTORES",
+      "forma": "pulsador",
+      "montaje": "POR DEFINIR",
+      "datos": {},
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_MOVIMIENTO",
+      "codigo": "SM",
+      "descripcion": "Sensor de movimiento",
+      "sistema": "IE",
+      "familia": "01_ILUMINACION_CONTROLES",
+      "capa": "IE-INTERRUPTORES",
+      "forma": "sensor_movimiento",
+      "montaje": "POR DEFINIR",
+      "datos": {},
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_PRESENCIA",
+      "codigo": "SP",
+      "descripcion": "Sensor de presencia",
+      "sistema": "IE",
+      "familia": "01_ILUMINACION_CONTROLES",
+      "capa": "IE-INTERRUPTORES",
+      "forma": "sensor_presencia",
+      "montaje": "POR DEFINIR",
+      "datos": {},
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_REGULADOR",
+      "codigo": "CI",
+      "descripcion": "Control / regulador de iluminacion",
+      "sistema": "IE",
+      "familia": "01_ILUMINACION_CONTROLES",
+      "capa": "IE-INTERRUPTORES",
+      "forma": "regulador",
+      "montaje": "POR DEFINIR",
+      "datos": {},
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TN_M040",
+      "codigo": "TN1",
+      "descripcion": "Doble 220 V 2P+T - pared 0.40 m",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-TOMAS-NORMALES",
+      "forma": "toma_pared",
+      "montaje": "PARED",
+      "datos": {
+        "ALTURA": "+0.40 m",
+        "TENSION": "220 V",
+        "CONFIGURACION": "2P+T",
+        "ALIMENTACION": "NORMAL",
+        "CORRIENTE": "",
+        "IP": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TN_M120",
+      "codigo": "TN2",
+      "descripcion": "Doble 220 V 2P+T - pared 1.20 m",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-TOMAS-NORMALES",
+      "forma": "toma_pared",
+      "montaje": "PARED",
+      "datos": {
+        "ALTURA": "+1.20 m",
+        "TENSION": "220 V",
+        "CONFIGURACION": "2P+T",
+        "ALIMENTACION": "NORMAL",
+        "CORRIENTE": "",
+        "IP": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TN_EST110",
+      "codigo": "TN3",
+      "descripcion": "Doble 220 V 2P+T - estanco 1.10 m",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-TOMAS-NORMALES",
+      "forma": "toma_estanco",
+      "montaje": "PARED",
+      "datos": {
+        "ALTURA": "+1.10 m",
+        "TENSION": "220 V",
+        "CONFIGURACION": "2P+T",
+        "ALIMENTACION": "NORMAL",
+        "CORRIENTE": "",
+        "IP": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TN_PISO",
+      "codigo": "TN4",
+      "descripcion": "Doble 220 V 2P+T - piso",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-TOMAS-NORMALES",
+      "forma": "toma_piso",
+      "montaje": "PISO",
+      "datos": {
+        "ALTURA": "NPT +/-0.00",
+        "TENSION": "220 V",
+        "CONFIGURACION": "2P+T",
+        "ALIMENTACION": "NORMAL",
+        "CORRIENTE": "",
+        "IP": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TN_MES110",
+      "codigo": "TN5",
+      "descripcion": "Doble 220 V 2P+T - mesada 1.10 m",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-TOMAS-NORMALES",
+      "forma": "toma_mesada",
+      "montaje": "MESADA",
+      "datos": {
+        "ALTURA": "+1.10 m",
+        "TENSION": "220 V",
+        "CONFIGURACION": "2P+T",
+        "ALIMENTACION": "NORMAL",
+        "CORRIENTE": "",
+        "IP": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TN_MES120",
+      "codigo": "TN6",
+      "descripcion": "Doble 220 V 2P+T - mesada 1.20 m",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-TOMAS-NORMALES",
+      "forma": "toma_mesada",
+      "montaje": "MESADA",
+      "datos": {
+        "ALTURA": "+1.20 m",
+        "TENSION": "220 V",
+        "CONFIGURACION": "2P+T",
+        "ALIMENTACION": "NORMAL",
+        "CORRIENTE": "",
+        "IP": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TN_TECHO",
+      "codigo": "TN7",
+      "descripcion": "Doble 220 V 2P+T - techo",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-TOMAS-NORMALES",
+      "forma": "toma_techo",
+      "montaje": "TECHO",
+      "datos": {
+        "ALTURA": "",
+        "TENSION": "220 V",
+        "CONFIGURACION": "2P+T",
+        "ALIMENTACION": "NORMAL",
+        "CORRIENTE": "",
+        "IP": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TE_M040",
+      "codigo": "TE1",
+      "descripcion": "Doble estabilizado - pared 0.40 m",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-TOMAS-ESTABILIZADOS",
+      "forma": "toma_pared_est",
+      "montaje": "PARED",
+      "datos": {
+        "ALTURA": "+0.40 m",
+        "TENSION": "220 V",
+        "CONFIGURACION": "2P+T",
+        "ALIMENTACION": "ESTABILIZADO",
+        "CORRIENTE": "",
+        "IP": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TE_M120",
+      "codigo": "TE2",
+      "descripcion": "Doble estabilizado - pared 1.20 m",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-TOMAS-ESTABILIZADOS",
+      "forma": "toma_pared_est",
+      "montaje": "PARED",
+      "datos": {
+        "ALTURA": "+1.20 m",
+        "TENSION": "220 V",
+        "CONFIGURACION": "2P+T",
+        "ALIMENTACION": "ESTABILIZADO",
+        "CORRIENTE": "",
+        "IP": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TE_PISO",
+      "codigo": "TE3",
+      "descripcion": "Doble estabilizado - piso",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-TOMAS-ESTABILIZADOS",
+      "forma": "toma_piso_est",
+      "montaje": "PISO",
+      "datos": {
+        "ALTURA": "NPT +/-0.00",
+        "TENSION": "220 V",
+        "CONFIGURACION": "2P+T",
+        "ALIMENTACION": "ESTABILIZADO",
+        "CORRIENTE": "",
+        "IP": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TE_AVTECHO",
+      "codigo": "TE4",
+      "descripcion": "Estabilizado audiovisual - techo",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-TOMAS-ESTABILIZADOS",
+      "forma": "toma_techo_est",
+      "montaje": "TECHO",
+      "datos": {
+        "ALTURA": "",
+        "TENSION": "220 V",
+        "CONFIGURACION": "2P+T",
+        "ALIMENTACION": "ESTABILIZADO",
+        "CORRIENTE": "",
+        "IP": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TE_AV220",
+      "codigo": "TE5",
+      "descripcion": "Estabilizado para pantalla - 2.20 m",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-TOMAS-ESTABILIZADOS",
+      "forma": "toma_pared_est",
+      "montaje": "PARED",
+      "datos": {
+        "ALTURA": "+2.20 m",
+        "TENSION": "220 V",
+        "CONFIGURACION": "2P+T",
+        "ALIMENTACION": "ESTABILIZADO",
+        "CORRIENTE": "",
+        "IP": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TE_AV120",
+      "codigo": "TE6",
+      "descripcion": "Estabilizado para dispensador - 1.20 m",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-TOMAS-ESTABILIZADOS",
+      "forma": "toma_pared_est",
+      "montaje": "PARED",
+      "datos": {
+        "ALTURA": "+1.20 m",
+        "TENSION": "220 V",
+        "CONFIGURACION": "2P+T",
+        "ALIMENTACION": "ESTABILIZADO",
+        "CORRIENTE": "",
+        "IP": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TE_ESPECIAL",
+      "codigo": "TE7",
+      "descripcion": "Salida estabilizada dedicada",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-TOMAS-ESTABILIZADOS",
+      "forma": "toma_dedicado_est",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "ALTURA": "",
+        "TENSION": "220 V",
+        "CONFIGURACION": "2P+T",
+        "ALIMENTACION": "ESTABILIZADO",
+        "CORRIENTE": "",
+        "IP": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_FUERZA",
+      "codigo": "FZ1",
+      "descripcion": "Salida de fuerza dedicada",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-FUERZA",
+      "forma": "fuerza",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "TENSION": "",
+        "FASES": "",
+        "POTENCIA": "",
+        "EQUIPO": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_MECANICA",
+      "codigo": "FM1",
+      "descripcion": "Salida para equipo mecanico",
+      "sistema": "IE",
+      "familia": "02_TOMACORRIENTES_FUERZA",
+      "capa": "IE-FUERZA",
+      "forma": "mecanica",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "TENSION": "",
+        "FASES": "",
+        "POTENCIA": "",
+        "EQUIPO": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_CAJA_ILUMINACION",
+      "codigo": "CI1",
+      "descripcion": "Caja de paso de iluminacion",
+      "sistema": "IE",
+      "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
+      "capa": "IE-CAJAS-PASO",
+      "forma": "caja",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "DIMENSIONES": "",
+        "MATERIAL": "",
+        "IP": "",
+        "FUNCION": "ILUMINACION"
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_CAJA_TOMAS",
+      "codigo": "CT1",
+      "descripcion": "Caja de paso de tomacorrientes",
+      "sistema": "IE",
+      "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
+      "capa": "IE-CAJAS-PASO",
+      "forma": "caja",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "DIMENSIONES": "",
+        "MATERIAL": "",
+        "IP": "",
+        "FUNCION": "TOMAS"
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_CAJA_FUERZA",
+      "codigo": "CF1",
+      "descripcion": "Caja de paso de fuerza",
+      "sistema": "IE",
+      "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
+      "capa": "IE-CAJAS-PASO",
+      "forma": "caja",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "DIMENSIONES": "",
+        "MATERIAL": "",
+        "IP": "",
+        "FUNCION": "FUERZA"
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_CAJA_DERIVACION",
+      "codigo": "CD1",
+      "descripcion": "Caja de derivacion",
+      "sistema": "IE",
+      "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
+      "capa": "IE-CAJAS-PASO",
+      "forma": "caja",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "DIMENSIONES": "",
+        "MATERIAL": "",
+        "IP": "",
+        "FUNCION": "DERIVACION"
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_CAJA_PARED",
+      "codigo": "CP1",
+      "descripcion": "Caja de paso en pared",
+      "sistema": "IE",
+      "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
+      "capa": "IE-CAJAS-PASO",
+      "forma": "caja",
+      "montaje": "PARED",
+      "datos": {
+        "DIMENSIONES": "",
+        "MATERIAL": "",
+        "IP": "",
+        "FUNCION": "PARED"
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_CAJA_TECHO",
+      "codigo": "CC1",
+      "descripcion": "Caja de paso en techo",
+      "sistema": "IE",
+      "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
+      "capa": "IE-CAJAS-PASO",
+      "forma": "caja",
+      "montaje": "TECHO",
+      "datos": {
+        "DIMENSIONES": "",
+        "MATERIAL": "",
+        "IP": "",
+        "FUNCION": "TECHO"
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_CAJA_ESPECIAL",
+      "codigo": "CE1",
+      "descripcion": "Caja para canalizacion especial",
+      "sistema": "IE",
+      "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
+      "capa": "IE-CAJAS-PASO",
+      "forma": "caja_rect",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "DIMENSIONES": "",
+        "MATERIAL": "",
+        "IP": "",
+        "FUNCION": "ESPECIAL"
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TABLERO_GENERAL",
+      "codigo": "TG1",
+      "descripcion": "Tablero general",
+      "sistema": "IE",
+      "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
+      "capa": "IE-TABLERO",
+      "forma": "tablero_general",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "TENSION": "",
+        "POTENCIA": "",
+        "CORRIENTE": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TABLERO_DISTRIBUCION",
+      "codigo": "TD1",
+      "descripcion": "Tablero de distribucion",
+      "sistema": "IE",
+      "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
+      "capa": "IE-TABLERO",
+      "forma": "tablero_distribucion",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "TENSION": "",
+        "POTENCIA": "",
+        "CORRIENTE": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TABLERO_UPS",
+      "codigo": "UPS1",
+      "descripcion": "Alimentacion ininterrumpida / UPS",
+      "sistema": "IE",
+      "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
+      "capa": "IE-TABLERO",
+      "forma": "tablero_ups",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "TENSION": "",
+        "POTENCIA": "",
+        "CORRIENTE": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_SUBE",
+      "codigo": "SB",
+      "descripcion": "Canalizacion que sube",
+      "sistema": "IE",
+      "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
+      "capa": "IE-CODIGOS",
+      "forma": "sube",
+      "montaje": "POR DEFINIR",
+      "datos": {},
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_BAJA",
+      "codigo": "BJ",
+      "descripcion": "Canalizacion que baja",
+      "sistema": "IE",
+      "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
+      "capa": "IE-CODIGOS",
+      "forma": "baja",
+      "montaje": "POR DEFINIR",
+      "datos": {},
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_SUBE_BAJA",
+      "codigo": "S/B",
+      "descripcion": "Canalizacion que sube y baja",
+      "sistema": "IE",
+      "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
+      "capa": "IE-CODIGOS",
+      "forma": "sube_baja",
+      "montaje": "POR DEFINIR",
+      "datos": {},
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_TIERRA",
+      "codigo": "PT",
+      "descripcion": "Punto de puesta a tierra",
+      "sistema": "IE",
+      "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
+      "capa": "IE-CODIGOS",
+      "forma": "tierra",
+      "montaje": "POR DEFINIR",
+      "datos": {},
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IE_CIRCUITO",
+      "codigo": "C01",
+      "descripcion": "Identificador de circuito",
+      "sistema": "IE",
+      "familia": "03_CAJAS_TABLEROS_CIRCUITOS",
+      "capa": "IE-CODIGOS",
+      "forma": "circuito",
+      "montaje": "POR DEFINIR",
+      "datos": {},
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_DATA_SIMPLE",
+      "codigo": "D1",
+      "descripcion": "Salida simple de data RJ45",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-DATA",
+      "forma": "data_1",
+      "montaje": "PARED",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": "",
+        "PUERTOS": "1",
+        "CATEGORIA": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_DATA_DOBLE",
+      "codigo": "D2",
+      "descripcion": "Salida doble Cat 6A - 2 RJ45",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-DATA",
+      "forma": "data_2",
+      "montaje": "PARED",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": "",
+        "PUERTOS": "2",
+        "CATEGORIA": "CAT 6A"
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_VOZ",
+      "codigo": "V1",
+      "descripcion": "Salida de voz",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-VOZ",
+      "forma": "voz",
+      "montaje": "PARED",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": "",
+        "PUERTOS": "1"
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_VOZ_DATA",
+      "codigo": "VD1",
+      "descripcion": "Salida combinada voz / data",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-VOZ",
+      "forma": "voz_data",
+      "montaje": "PARED",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": "",
+        "PUERTOS": "2"
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_AP",
+      "codigo": "AP1",
+      "descripcion": "Punto de acceso Wi-Fi",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-WIFI",
+      "forma": "ap",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_CAM_DOMO",
+      "codigo": "CD1",
+      "descripcion": "Camara CCTV tipo domo",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-CCTV",
+      "forma": "cam_domo",
+      "montaje": "TECHO",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_CAM_BALA",
+      "codigo": "CB1",
+      "descripcion": "Camara CCTV tipo bala",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-CCTV",
+      "forma": "cam_bala",
+      "montaje": "PARED",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_CAM_PTZ",
+      "codigo": "CZ1",
+      "descripcion": "Camara CCTV tipo PTZ",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-CCTV",
+      "forma": "cam_ptz",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_CONTROL_ACCESO",
+      "codigo": "CA1",
+      "descripcion": "Punto de control de acceso",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-ACCESOS",
+      "forma": "acceso",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_LECTOR",
+      "codigo": "LT1",
+      "descripcion": "Lector de tarjetas",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-ACCESOS",
+      "forma": "lector",
+      "montaje": "PARED",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_CERRADURA",
+      "codigo": "EM1",
+      "descripcion": "Cerradura electromagnetica",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-ACCESOS",
+      "forma": "cerradura",
+      "montaje": "PUERTA",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_PULSADOR",
+      "codigo": "PS1",
+      "descripcion": "Pulsador de salida",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-ACCESOS",
+      "forma": "pulsador_salida",
+      "montaje": "PARED",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_RACK",
+      "codigo": "RK1",
+      "descripcion": "Rack de comunicaciones",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-RACK",
+      "forma": "rack",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": "",
+        "UNIDADES_RACK": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_GABINETE",
+      "codigo": "GC1",
+      "descripcion": "Gabinete de comunicaciones",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-RACK",
+      "forma": "gabinete",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_PATCH_PANEL",
+      "codigo": "PP1",
+      "descripcion": "Patch panel",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-RACK",
+      "forma": "patch",
+      "montaje": "RACK",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": "",
+        "PUERTOS": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_SWITCH",
+      "codigo": "SW1",
+      "descripcion": "Switch de comunicaciones",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-RACK",
+      "forma": "switch",
+      "montaje": "RACK",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": "",
+        "PUERTOS": "",
+        "POE": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_CAJA",
+      "codigo": "CC1",
+      "descripcion": "Caja de paso de comunicaciones",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-CAJAS",
+      "forma": "caja",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": "",
+        "DIMENSIONES": "",
+        "MATERIAL": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_FO_SALIDA",
+      "codigo": "FO1",
+      "descripcion": "Salida de fibra optica",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-FIBRA",
+      "forma": "fibra",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": "",
+        "FIBRAS": "",
+        "CONECTOR": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "IC_FO_INTERCONEXION",
+      "codigo": "FI1",
+      "descripcion": "Interconexion de fibra optica",
+      "sistema": "IC",
+      "familia": "04_DATA_COMUNICACIONES",
+      "capa": "IC-FIBRA",
+      "forma": "fibra_interconexion",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "PUNTO": "",
+        "CABLE": "",
+        "FIBRAS": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_HUMO",
+      "codigo": "DH1",
+      "descripcion": "Detector de humo",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-HUMO",
+      "forma": "detector_humo",
+      "montaje": "TECHO",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_TERMICO",
+      "codigo": "DT1",
+      "descripcion": "Detector termico",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-TERMICO",
+      "forma": "detector_termico",
+      "montaje": "TECHO",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_MULTICRITERIO",
+      "codigo": "DM1",
+      "descripcion": "Detector multicriterio",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-HUMO",
+      "forma": "detector_multi",
+      "montaje": "TECHO",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_DUCTO",
+      "codigo": "DD1",
+      "descripcion": "Detector de humo para ductos",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-HUMO",
+      "forma": "detector_ducto",
+      "montaje": "DUCTO",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_ESTACION",
+      "codigo": "EM1",
+      "descripcion": "Estacion manual de alarma",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-ESTACIONES",
+      "forma": "estacion",
+      "montaje": "PARED",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_SIRENA",
+      "codigo": "SA1",
+      "descripcion": "Sirena de alarma",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-SIRENAS",
+      "forma": "sirena",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_ESTROBO",
+      "codigo": "LE1",
+      "descripcion": "Luz estroboscopica",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-SIRENAS",
+      "forma": "estrobo",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_SIRENA_ESTROBO",
+      "codigo": "SE1",
+      "descripcion": "Sirena con luz estroboscopica",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-SIRENAS",
+      "forma": "sirena_estrobo",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_FACP",
+      "codigo": "FACP1",
+      "descripcion": "Panel central de alarma / FACP",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-PANELES",
+      "forma": "facp",
+      "montaje": "PARED",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_REPETIDOR",
+      "codigo": "PR1",
+      "descripcion": "Panel repetidor",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-PANELES",
+      "forma": "repetidor",
+      "montaje": "PARED",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_MONITOREO",
+      "codigo": "MM1",
+      "descripcion": "Modulo de monitoreo",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-MODULOS",
+      "forma": "modulo_monitoreo",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_CONTROL",
+      "codigo": "MC1",
+      "descripcion": "Modulo de control",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-MODULOS",
+      "forma": "modulo_control",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_AISLADOR",
+      "codigo": "AI1",
+      "descripcion": "Modulo aislador",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-MODULOS",
+      "forma": "modulo_aislador",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_FUENTE",
+      "codigo": "FA1",
+      "descripcion": "Fuente auxiliar de alimentacion",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-MODULOS",
+      "forma": "fuente",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_CAJA",
+      "codigo": "CA1",
+      "descripcion": "Caja de paso DACI",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-CAJAS",
+      "forma": "caja",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    },
+    {
+      "nombre": "DACI_INTERFAZ",
+      "codigo": "IF1",
+      "descripcion": "Interfaz de supervision / control",
+      "sistema": "DACI",
+      "familia": "05_DETECCION_ALARMA",
+      "capa": "DACI-MODULOS",
+      "forma": "interfaz",
+      "montaje": "POR DEFINIR",
+      "datos": {
+        "LAZO": "",
+        "DIRECCION": "",
+        "ZONA": "",
+        "MODELO": "",
+        "DIMENSIONES": ""
+      },
+      "fuente": "Prompt del usuario; convencion grafica interna de proyecto"
+    }
+  ],
+  "rutas": [
+    {
+      "nombre": "EIC_EMT_D16",
+      "texto": "EMT %%c16 mm",
+      "capa": "IE-TUBERIA-EMT",
+      "sistema": "IE",
+      "material": "EMT",
+      "diametro": 16
+    },
+    {
+      "nombre": "EIC_EMT_D20",
+      "texto": "EMT %%c20 mm",
+      "capa": "IE-TUBERIA-EMT",
+      "sistema": "IE",
+      "material": "EMT",
+      "diametro": 20
+    },
+    {
+      "nombre": "EIC_EMT_D25",
+      "texto": "EMT %%c25 mm",
+      "capa": "IE-TUBERIA-EMT",
+      "sistema": "IE",
+      "material": "EMT",
+      "diametro": 25
+    },
+    {
+      "nombre": "EIC_EMT_D32",
+      "texto": "EMT %%c32 mm",
+      "capa": "IE-TUBERIA-EMT",
+      "sistema": "IE",
+      "material": "EMT",
+      "diametro": 32
+    },
+    {
+      "nombre": "EIC_EMT_D40",
+      "texto": "EMT %%c40 mm",
+      "capa": "IE-TUBERIA-EMT",
+      "sistema": "IE",
+      "material": "EMT",
+      "diametro": 40
+    },
+    {
+      "nombre": "EIC_EMT_D50",
+      "texto": "EMT %%c50 mm",
+      "capa": "IE-TUBERIA-EMT",
+      "sistema": "IE",
+      "material": "EMT",
+      "diametro": 50
+    },
+    {
+      "nombre": "EIC_PVC_D16",
+      "texto": "PVC %%c16 mm",
+      "capa": "IE-TUBERIA-PVC",
+      "sistema": "IE",
+      "material": "PVC",
+      "diametro": 16
+    },
+    {
+      "nombre": "EIC_PVC_D20",
+      "texto": "PVC %%c20 mm",
+      "capa": "IE-TUBERIA-PVC",
+      "sistema": "IE",
+      "material": "PVC",
+      "diametro": 20
+    },
+    {
+      "nombre": "EIC_PVC_D25",
+      "texto": "PVC %%c25 mm",
+      "capa": "IE-TUBERIA-PVC",
+      "sistema": "IE",
+      "material": "PVC",
+      "diametro": 25
+    },
+    {
+      "nombre": "EIC_PVC_D32",
+      "texto": "PVC %%c32 mm",
+      "capa": "IE-TUBERIA-PVC",
+      "sistema": "IE",
+      "material": "PVC",
+      "diametro": 32
+    },
+    {
+      "nombre": "EIC_PVC_D40",
+      "texto": "PVC %%c40 mm",
+      "capa": "IE-TUBERIA-PVC",
+      "sistema": "IE",
+      "material": "PVC",
+      "diametro": 40
+    },
+    {
+      "nombre": "EIC_PVC_D50",
+      "texto": "PVC %%c50 mm",
+      "capa": "IE-TUBERIA-PVC",
+      "sistema": "IE",
+      "material": "PVC",
+      "diametro": 50
+    },
+    {
+      "nombre": "EIC_CORR_D16",
+      "texto": "CORR %%c16 mm",
+      "capa": "IE-TUBERIA-CORRUGADA",
+      "sistema": "IE",
+      "material": "CORR",
+      "diametro": 16
+    },
+    {
+      "nombre": "EIC_CORR_D20",
+      "texto": "CORR %%c20 mm",
+      "capa": "IE-TUBERIA-CORRUGADA",
+      "sistema": "IE",
+      "material": "CORR",
+      "diametro": 20
+    },
+    {
+      "nombre": "EIC_CORR_D25",
+      "texto": "CORR %%c25 mm",
+      "capa": "IE-TUBERIA-CORRUGADA",
+      "sistema": "IE",
+      "material": "CORR",
+      "diametro": 25
+    },
+    {
+      "nombre": "EIC_CORR_D32",
+      "texto": "CORR %%c32 mm",
+      "capa": "IE-TUBERIA-CORRUGADA",
+      "sistema": "IE",
+      "material": "CORR",
+      "diametro": 32
+    },
+    {
+      "nombre": "EIC_CORR_D40",
+      "texto": "CORR %%c40 mm",
+      "capa": "IE-TUBERIA-CORRUGADA",
+      "sistema": "IE",
+      "material": "CORR",
+      "diametro": 40
+    },
+    {
+      "nombre": "EIC_CORR_D50",
+      "texto": "CORR %%c50 mm",
+      "capa": "IE-TUBERIA-CORRUGADA",
+      "sistema": "IE",
+      "material": "CORR",
+      "diametro": 50
+    },
+    {
+      "nombre": "EIC_FMC_D16",
+      "texto": "FMC %%c16 mm",
+      "capa": "IE-TUBERIA-FMC",
+      "sistema": "IE",
+      "material": "FMC",
+      "diametro": 16
+    },
+    {
+      "nombre": "EIC_FMC_D20",
+      "texto": "FMC %%c20 mm",
+      "capa": "IE-TUBERIA-FMC",
+      "sistema": "IE",
+      "material": "FMC",
+      "diametro": 20
+    },
+    {
+      "nombre": "EIC_FMC_D25",
+      "texto": "FMC %%c25 mm",
+      "capa": "IE-TUBERIA-FMC",
+      "sistema": "IE",
+      "material": "FMC",
+      "diametro": 25
+    },
+    {
+      "nombre": "EIC_FMC_D32",
+      "texto": "FMC %%c32 mm",
+      "capa": "IE-TUBERIA-FMC",
+      "sistema": "IE",
+      "material": "FMC",
+      "diametro": 32
+    },
+    {
+      "nombre": "EIC_FMC_D40",
+      "texto": "FMC %%c40 mm",
+      "capa": "IE-TUBERIA-FMC",
+      "sistema": "IE",
+      "material": "FMC",
+      "diametro": 40
+    },
+    {
+      "nombre": "EIC_FMC_D50",
+      "texto": "FMC %%c50 mm",
+      "capa": "IE-TUBERIA-FMC",
+      "sistema": "IE",
+      "material": "FMC",
+      "diametro": 50
+    },
+    {
+      "nombre": "EIC_CAT6A_UFTP",
+      "texto": "U/FTP CAT6A",
+      "capa": "IC-CANALIZACIONES",
+      "sistema": "IC",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_CAT6A_FUTP",
+      "texto": "F/UTP CAT6A",
+      "capa": "IC-CANALIZACIONES",
+      "sistema": "IC",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_FIBRA",
+      "texto": "FO",
+      "capa": "IC-FIBRA",
+      "sistema": "IC",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_BANDEJA",
+      "texto": "BANDEJA COM",
+      "capa": "IC-CANALIZACIONES",
+      "sistema": "IC",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_CCTV",
+      "texto": "CCTV",
+      "capa": "IC-CCTV",
+      "sistema": "IC",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_ACCESO",
+      "texto": "ACCESO",
+      "capa": "IC-ACCESOS",
+      "sistema": "IC",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_IC_EMT",
+      "texto": "COM EMT",
+      "capa": "IC-CANALIZACIONES",
+      "sistema": "IC",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_IC_PVC",
+      "texto": "COM PVC",
+      "capa": "IC-CANALIZACIONES",
+      "sistema": "IC",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_IC_CORR",
+      "texto": "COM CORR",
+      "capa": "IC-CANALIZACIONES",
+      "sistema": "IC",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_SLC",
+      "texto": "SLC",
+      "capa": "DACI-SLC",
+      "sistema": "DACI",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_NAC",
+      "texto": "NAC",
+      "capa": "DACI-NAC",
+      "sistema": "DACI",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_ALIM",
+      "texto": "ALIM DACI",
+      "capa": "DACI-ALIMENTACION",
+      "sistema": "DACI",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_SUPERVISION",
+      "texto": "SUP DACI",
+      "capa": "DACI-SUPERVISION",
+      "sistema": "DACI",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_MODULOS",
+      "texto": "MOD DACI",
+      "capa": "DACI-CANALIZACIONES",
+      "sistema": "DACI",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_PANELES",
+      "texto": "RED FACP",
+      "capa": "DACI-CANALIZACIONES",
+      "sistema": "DACI",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_DACI_EMT",
+      "texto": "DACI EMT",
+      "capa": "DACI-CANALIZACIONES",
+      "sistema": "DACI",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_DACI_PVC",
+      "texto": "DACI PVC",
+      "capa": "DACI-CANALIZACIONES",
+      "sistema": "DACI",
+      "material": "",
+      "diametro": ""
+    },
+    {
+      "nombre": "EIC_DACI_CORR",
+      "texto": "DACI CORR",
+      "capa": "DACI-CANALIZACIONES",
+      "sistema": "DACI",
+      "material": "",
+      "diametro": ""
+    }
+  ],
+  "luminarias_pendientes": 9,
+  "bloques_dinamicos_nativos": false,
+  "estado_normativo": "Convenciones de proyecto; fuentes normativas originales no disponibles"
+}

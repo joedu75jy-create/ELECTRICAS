@@ -1,0 +1,30 @@
+{
+  "repositorio": "ELECTRICAS",
+  "archivos_iniciales_repositorio": [
+    "README.md"
+  ],
+  "referencias_disponibles": [
+    "PLANTILLA_IE.zip",
+    "Prompt maestro (texto)",
+    "Ampliacion (texto)"
+  ],
+  "referencias_no_disponibles": [
+    "SIMBOLOGÍA DE TOMACORRIENTES.DXF",
+    "REGISTRO_LUMINARIAS_SIETE_NIVELES.md"
+  ],
+  "AutoCAD": "no instalado",
+  "ODAFileConverter": "no instalado",
+  "luminarias_documentadas": [
+    "L-01",
+    "L-02",
+    "L-03",
+    "L-04"
+  ],
+  "luminarias_restantes": "9 pendientes, no se crean modelos ficticios",
+  "bibliotecas_nuevas": {
+    "IE": 44,
+    "IC": 19,
+    "DACI": 16
+  },
+  "bloques_dinamicos_nativos": "no generados"
+}

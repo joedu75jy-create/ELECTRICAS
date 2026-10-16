@@ -1,0 +1,10 @@
+{
+  "origen": "FUENTES extraidas del ZIP de entrega",
+  "scripts": [
+    "corregir_base.py",
+    "generar.py",
+    "verificar.py",
+    "empaquetar.py"
+  ],
+  "resultado": "todos ejecutados correctamente desde el paquete portable"
+}
