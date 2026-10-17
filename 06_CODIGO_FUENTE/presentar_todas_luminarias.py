@@ -1,4 +1,4 @@
-"""Presentación REV D de los doce tipos, sin códigos debajo de los símbolos.
+"""Presentación REV E de los doce tipos, sin códigos debajo de los símbolos.
 Reutiliza exactamente el dibujo L-03 de la revisión C aprobada para presentación.
 No crea bloques definitivos. Uso: python presentar_todas_luminarias.py cuadro.xlsx salida
 """
@@ -20,8 +20,17 @@ class Catalog(Detailed):
  def footer(self,note='Códigos únicamente en cabeceras de ficha · Símbolos sin rótulo exterior · Propuesta gráfica de proyecto.'):
   self.line(16,280,404,280,EDGE)
   self.txt(16,287,note,8,col=GREY)
-  self.txt(363,287,f'REV D / {self.n:02d}',8,True,BLUE)
+  self.txt(363,287,f'REV E / {self.n:02d}',8,True,BLUE)
   self.c.showPage()
+ def linear(self,x,y,ww,hh=None,col=BODY,variant=''):
+  hh=hh or ww*.11
+  super().linear(x,y,ww,hh,col,variant='')
+  if variant:
+   pt=max(4.5,hh*.9)
+   width=pdfmetrics.stringWidth(variant,'OB',pt)/mm
+   lx=x+ww*.295-width
+   self.rect(lx-.45,y-hh*.08,width+.9,hh*.5,fill='#ffffff',col='#ffffff',lw=0)
+   self.txt(lx,y+hh*.28,variant,pt,True,col)
  def lamp(self,code,x,y,size):
   if code.startswith('L-03'):
    d=Drawing(self.c,H)
@@ -34,7 +43,7 @@ class Catalog(Detailed):
    tag={'L-03-D':'DALI','L-03-DA':'DALI','L-03-IP65':'IP65','L-03-90':'IRC90'}.get(code)
    if tag:d.text(x-size*.35,y+size*.34,tag,size*.075*mm,BODY)
   elif code.startswith('L-01'):
-   self.linear(x,y,size,col=BODY,variant='15W' if code=='L-01-15' else '1800' if code=='L-01-18' else '')
+   self.linear(x,y,size,col=BODY,variant='15W-A' if code=='L-01-15' else '15W-B' if code=='L-01-18' else '')
   else:
    self.circular('wall' if code=='L-02' else 'recess' if code=='L-04B' else 'surface',x,y,size,BODY)
 
@@ -49,9 +58,9 @@ def main(excel,out):
     lm=s.cell(r,4).value,ip=s.cell(r,7).value,mount=s.cell(r,8).value))
  assert len(specs)==12 and len({s['code'] for s in specs})==12
  by={s['code']:s for s in specs}
- fn=out/'TODAS_LUMINARIAS_SIN_ROTULOS_REV_D.pdf'
+ fn=out/'TODAS_LUMINARIAS_SIN_ROTULOS_REV_E.pdf'
  c=canvas.Canvas(str(fn),pagesize=(W*mm,H*mm),pageCompression=1)
- c.setTitle('MCF Piura · Los 12 tipos de luminarias sin códigos exteriores · REV D')
+ c.setTitle('MCF Piura · Los 12 tipos de luminarias sin códigos exteriores · REV E')
  sh=Catalog(c)
  sh.header('Las 12 luminarias / presentación completa','Acabado del panel L-03 aprobado · Sin códigos debajo de los dibujos · LED conservado en el interior')
  for i,s in enumerate(specs):
@@ -82,17 +91,17 @@ def main(excel,out):
   sh.para(x+6,y+86,111,'Módulo nominal 60 × 60 cm · Empotrado en falso cielo raso.',8,col=GREY)
  sh.footer('Esquina adicional, DALI, IP65 e IRC90 son identificadores gráficos de proyecto; no representan figuras normativas nuevas.')
 
- sh.header('Lineales / carcasa y difusor','Cuerpo, extremos, difusor y presillas con el mismo cuidado de dibujo. Ningún código se coloca debajo del símbolo.')
+ sh.header('Lineales / variantes de 15 W identificadas como A y B','15W-A: 2.250 lm · 15W-B: 1.800 lm · La marca interior usa potencia y variante en ambos dibujos.')
  for i,code in enumerate(['L-01','L-01-15','L-01-18']):
   yy=69+i*62;s=by[code]
   sh.txt(20,yy,code,16,True)
   sh.txt(20,yy+10,f"{s['power']} W / {s['lm']} lm / IP65",10,col=BLUE)
   sh.lamp(code,205,yy+8,188 if i==0 else 113)
-  sh.txt(331,yy+3,'Marco y extremos definidos',9)
-  sh.txt(331,yy+10,'Difusor continuo',9)
+  sh.txt(331,yy+3,{'L-01-15':'Interior: 15W-A','L-01-18':'Interior: 15W-B'}.get(code,'Marco y extremos definidos'),9)
+  sh.txt(331,yy+10,'Flujo indicado en la ficha' if code!='L-01' else 'Difusor continuo',9)
   sh.txt(331,yy+17,'Presillas orientativas',9)
   sh.line(20,yy+34,400,yy+34,EDGE)
- sh.para(20,255,380,'L-01 es la versión larga de 1,20 m nominal; las dos variantes cortas de 15 W se distinguen por el tipo y el flujo del cuadro. Los detalles de carcasa se presentan como aproximaciones gráficas pendientes del equipo definitivo.',9)
+ sh.para(20,255,380,'Correspondencia de leyenda: 15W-A = L-01-15, 15 W y 2.250 lm; 15W-B = L-01-18, 15 W y 1.800 lm. A/B son identificadores de proyecto. Se conservan los códigos originales del Excel y el acabado del dibujo.',9)
  sh.footer()
 
  sh.header('Circulares / aplique y downlights','Aros, difusor y centro conservan la identidad de la familia. El perfil ayuda a reconocer el montaje.')
@@ -127,9 +136,9 @@ def main(excel,out):
  for s in specs:assert s['code'] in text
  for i,page in enumerate(d):
   assert abs(page.rect.width-W*mm)<.01
-  page.get_pixmap(dpi=110,alpha=False).save(out/f'TODAS_LUMINARIAS_REV_D_{i+1:02d}.png')
+  page.get_pixmap(dpi=110,alpha=False).save(out/f'TODAS_LUMINARIAS_REV_E_{i+1:02d}.png')
  # El gráfico L-03 básico reutiliza Drawing.panel de la revisión aprobada.
- (out/'REV_D_DATOS.json').write_text(json.dumps(dict(tipos=specs,base_panel='Drawing.panel de propuesta_l03_sin_rotulo.py, REV C',
+ (out/'REV_E_DATOS.json').write_text(json.dumps(dict(tipos=specs,identificacion_interior={'L-01-15':'15W-A','L-01-18':'15W-B'},base_panel='Drawing.panel de propuesta_l03_sin_rotulo.py, REV C',
    codigos_en_simbolos=False,codigos_en_cabeceras_de_ficha=True,paginas=4,planos_modificados=False,bloques_definitivos_creados=False),ensure_ascii=False,indent=2))
  print(json.dumps({'pdf':str(fn),'paginas':len(d),'tipos':len(specs),'bytes':fn.stat().st_size}))
 
