@@ -12,4 +12,6 @@ Uso y limitaciones: [GUIA_DE_USO.md](05_CATALOGOS/GUIA_DE_USO.md).
 
 Regeneracion: `python 06_CODIGO_FUENTE/generar.py`, `python 06_CODIGO_FUENTE/verificar.py`.
 
-Distribución de luminarias del semisótano para revisión visual: [PDF con vista general y detalles](12_PROYECTOS/SEMISOTANO_ILUMINACION/SEMISOTANO_LUMINARIAS_VISTA.pdf), [DXF integrado](12_PROYECTOS/SEMISOTANO_ILUMINACION/SEMISOTANO_LUMINARIAS_INTEGRADAS.dxf) y [entrega completa](12_PROYECTOS/SEMISOTANO_ILUMINACION/SEMISOTANO_LUMINARIAS_ENTREGA.zip). Contiene 162 luminarias sobre la base recibida, sin recorridos; consulte el [alcance](12_PROYECTOS/SEMISOTANO_ILUMINACION/LEEME.md).
+Semisótano, propuesta visual vigente REV 02: [antes/después y plano integrado](12_PROYECTOS/SEMISOTANO_ILUMINACION_REV02/SEMISOTANO_PROPUESTA_REV02_VISTA.pdf), [único DXF integrado](12_PROYECTOS/SEMISOTANO_ILUMINACION_REV02/SEMISOTANO_LUMINARIAS_PROPUESTA_REV02.dxf) y [alcance](12_PROYECTOS/SEMISOTANO_ILUMINACION_REV02/LEEME_REV02.md). Se replantean las 69 luminarias del estacionamiento entre las franjas de la arquitectura, conservando las otras 93 como referencia sin revisar. Alturas y recálculo lumínico pendientes; sin recorridos.
+
+Referencia anterior de posiciones DIALux, con interferencias gráficas detectadas en el estacionamiento: [PDF anterior](12_PROYECTOS/SEMISOTANO_ILUMINACION/SEMISOTANO_LUMINARIAS_VISTA.pdf) y [alcance original](12_PROYECTOS/SEMISOTANO_ILUMINACION/LEEME.md). No usar como distribución corregida.

@@ -1,0 +1,25 @@
+{
+  "estacionamiento": 69,
+  "luminarias_totales": 162,
+  "otros_puntos_sin_replantear": 93,
+  "cantidades_por_franja": [
+    5,
+    18,
+    18,
+    14,
+    14
+  ],
+  "potencia_estacionamiento_w": 1035,
+  "franjas_contrastadas": 44,
+  "simbolos_superpuestos_antes": 22,
+  "simbolos_superpuestos_propuesta": 0,
+  "separacion_grafica_minima_franjas_m": 0.575,
+  "proyecciones_de_ductos_contrastadas": 14,
+  "superposiciones_graficas_ductos_propuesta": 0,
+  "altura_propuesta": "PENDIENTE",
+  "errores_auditoria": 0,
+  "correcciones_auditoria": 0,
+  "fuente_franjas": "Pares de caras A-DETL de la arquitectura; pendiente confirmacion estructural y peraltes",
+  "alcance_comprobacion": "Superposicion XY de simbolos graficos, no colision fisica 3D ni validacion luminica",
+  "dxf_sha256": "8d40c8284bbe6ef91b1e302f1b99bd748bd619fbb041ffb6db6c0375bc9f1b9d"
+}
