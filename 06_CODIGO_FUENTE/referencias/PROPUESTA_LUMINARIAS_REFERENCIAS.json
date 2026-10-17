@@ -1,0 +1,171 @@
+{
+  "revision": "A",
+  "tipos": [
+    {
+      "code": "L-01",
+      "desc": "Luminaria hermética LED lineal 1,20 m",
+      "power": 36.0,
+      "lm": 5400.0,
+      "ip": "IP65",
+      "mount": "Adosada a losa o suspendida sobre perfil portante",
+      "qty": 35,
+      "kind": "linear_long"
+    },
+    {
+      "code": "L-01-15",
+      "desc": "Luminaria hermética LED lineal",
+      "power": 15.0,
+      "lm": 2250.0,
+      "ip": "IP65",
+      "mount": "Adosada a losa o suspendida sobre perfil portante",
+      "qty": 136,
+      "kind": "linear_short"
+    },
+    {
+      "code": "L-01-18",
+      "desc": "Luminaria hermética LED lineal 0,60 m",
+      "power": 15.0,
+      "lm": 1800.0,
+      "ip": "IP65",
+      "mount": "Adosada a losa o suspendida sobre perfil portante",
+      "qty": 31,
+      "kind": "linear_short"
+    },
+    {
+      "code": "L-02",
+      "desc": "Aplique LED circular de pared",
+      "power": 20.0,
+      "lm": 2200.0,
+      "ip": "IP65",
+      "mount": "En pared",
+      "qty": 139,
+      "kind": "wall"
+    },
+    {
+      "code": "L-03",
+      "desc": "Panel LED 60 x 60 cm",
+      "power": 26.0,
+      "lm": 3600.0,
+      "ip": "IP20",
+      "mount": "Empotrado en falso cielo raso",
+      "qty": 516,
+      "kind": "panel"
+    },
+    {
+      "code": "L-03-D",
+      "desc": "Panel LED 60 x 60 cm con driver regulable DALI",
+      "power": 26.0,
+      "lm": 3600.0,
+      "ip": "IP20",
+      "mount": "Empotrado en falso cielo raso",
+      "qty": 163,
+      "kind": "panel"
+    },
+    {
+      "code": "L-03A",
+      "desc": "Panel LED 60 x 60 cm de flujo reducido",
+      "power": 21.6,
+      "lm": 3000.0,
+      "ip": "IP20",
+      "mount": "Empotrado en falso cielo raso",
+      "qty": 11,
+      "kind": "panel"
+    },
+    {
+      "code": "L-03-DA",
+      "desc": "Panel LED 60 x 60 cm de flujo reducido con driver regulable DALI",
+      "power": 23.8,
+      "lm": 3300.0,
+      "ip": "IP20",
+      "mount": "Empotrado en falso cielo raso",
+      "qty": 18,
+      "kind": "panel"
+    },
+    {
+      "code": "L-03-IP65",
+      "desc": "Panel LED 60 x 60 cm hermético",
+      "power": 26.0,
+      "lm": 3600.0,
+      "ip": "IP65",
+      "mount": "Empotrado en falso cielo raso",
+      "qty": 4,
+      "kind": "panel"
+    },
+    {
+      "code": "L-03-90",
+      "desc": "Panel LED 60 x 60 cm de alta reproducción cromática",
+      "power": 45.0,
+      "lm": 5000.0,
+      "ip": "IP65",
+      "mount": "Empotrado en falso cielo raso",
+      "qty": 4,
+      "kind": "panel"
+    },
+    {
+      "code": "L-04B",
+      "desc": "Downlight LED circular empotrable",
+      "power": 11.0,
+      "lm": 1100.0,
+      "ip": "IP44 frontal",
+      "mount": "Empotrado en falso cielo raso",
+      "qty": 550,
+      "kind": "down_recess"
+    },
+    {
+      "code": "L-04C",
+      "desc": "Downlight LED circular de superficie",
+      "power": 11.0,
+      "lm": 1100.0,
+      "ip": "IP44 frontal",
+      "mount": "Adosado a losa",
+      "qty": 18,
+      "kind": "down_surface"
+    }
+  ],
+  "fuentes": [
+    [
+      "S1",
+      "Cuadro de luminarias recibido",
+      "Leyenda, Resumen y hojas por piso. Fuente de códigos, cantidades, potencia, flujo, IP y montaje.",
+      ""
+    ],
+    [
+      "S2",
+      "Memoria de iluminación del semisótano, REV1",
+      "Páginas 10–15 y planos de situación: cinco modelos de referencia.",
+      ""
+    ],
+    [
+      "S3",
+      "LEDVANCE DAMP PROOF PFM 15 W",
+      "Artículo 4099854146671. Referencia de carcasa lineal; web consultada: 599 × 77 × 68 mm.",
+      "https://www.ledvance.com/pt-br/iluminacao-profissional/produtos/luminarias/luminarias-com-tecnologia-led-para-teto--parede-e-piso/luminarias-hermeticas-com-e-sem-led-integrado-para-uso-profissional-ip65/luminarias-hermeticas-com-led-integrado-c232595?productId=261282"
+    ],
+    [
+      "S4",
+      "Philips WL140V / aplique L-02",
+      "Artículo 911401847682. Referencia circular: diámetro 390 mm, espesor 85 mm.",
+      "https://www.assets.signify.com/is/content/Signify/911401847682_EU.en_SA.PROF.FP"
+    ],
+    [
+      "S5",
+      "Philips DN145B / downlight L-04B",
+      "Artículo 911401806080: diámetro exterior 166 mm; corte 155 mm; altura 28 mm.",
+      "https://www.signify.com/global/prof/indoor-luminaires/downlights/philips-coreline-slimdownlight/911401806080_EU/product"
+    ],
+    [
+      "S6",
+      "Philips RC132V / panel L-03-IP65",
+      "Artículo 911401891585: cuerpo 595 × 595 × 65 mm; módulo nominal 600 × 600 mm.",
+      "https://www.signify.com/cs-cz/prof/interierova-svitidla/zapustene/philips-coreline-panel-gen6/911401891585_EU/product"
+    ],
+    [
+      "S7",
+      "DGE: simbología, sección 9",
+      "Figuras 09-93-51/52/53 y 09-93-60. Copia de consulta archivada en el repositorio.",
+      "https://www.gob.pe/institucion/minem/normas-legales/108773-0091-2002-mem"
+    ]
+  ],
+  "bloques_creados": false,
+  "planos_modificados": false
+}
