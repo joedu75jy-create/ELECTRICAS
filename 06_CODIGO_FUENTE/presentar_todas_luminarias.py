@@ -1,4 +1,4 @@
-"""Presentación REV E de los doce tipos, sin códigos debajo de los símbolos.
+"""Presentación REV F de los doce tipos, sin códigos debajo de los símbolos.
 Reutiliza exactamente el dibujo L-03 de la revisión C aprobada para presentación.
 No crea bloques definitivos. Uso: python presentar_todas_luminarias.py cuadro.xlsx salida
 """
@@ -20,17 +20,27 @@ class Catalog(Detailed):
  def footer(self,note='Códigos únicamente en cabeceras de ficha · Símbolos sin rótulo exterior · Propuesta gráfica de proyecto.'):
   self.line(16,280,404,280,EDGE)
   self.txt(16,287,note,8,col=GREY)
-  self.txt(363,287,f'REV E / {self.n:02d}',8,True,BLUE)
+  self.txt(363,287,f'REV F / {self.n:02d}',8,True,BLUE)
   self.c.showPage()
  def linear(self,x,y,ww,hh=None,col=BODY,variant=''):
   hh=hh or ww*.11
-  super().linear(x,y,ww,hh,col,variant='')
+  super().linear(x,y,ww,hh,col,variant='',led=False)
+  if ww>40:
+   led_pt=max(5,hh*1.4)
+   led_width=pdfmetrics.stringWidth('LED','OR',led_pt)/mm
+   self.txt(x-led_width/2,y+hh*.28,'LED',led_pt,False,col)
   if variant:
    pt=max(4.5,hh*.9)
    width=pdfmetrics.stringWidth(variant,'OB',pt)/mm
    lx=x+ww*.295-width
    self.rect(lx-.45,y-hh*.08,width+.9,hh*.5,fill='#ffffff',col='#ffffff',lw=0)
    self.txt(lx,y+hh*.28,variant,pt,True,col)
+ def circular(self,kind,x,y,d,col=BODY):
+  super().circular(kind,x,y,d,col,led=False,center_scale=.20)
+  # Una unica regla para las tres circulares, tanto en vista general como detalle.
+  pt=d*.15*mm
+  width=pdfmetrics.stringWidth('LED','OR',pt)/mm
+  self.txt(x-width/2,y+d*.26,'LED',pt,False,col)
  def lamp(self,code,x,y,size):
   if code.startswith('L-03'):
    d=Drawing(self.c,H)
@@ -58,9 +68,9 @@ def main(excel,out):
     lm=s.cell(r,4).value,ip=s.cell(r,7).value,mount=s.cell(r,8).value))
  assert len(specs)==12 and len({s['code'] for s in specs})==12
  by={s['code']:s for s in specs}
- fn=out/'TODAS_LUMINARIAS_SIN_ROTULOS_REV_E.pdf'
+ fn=out/'TODAS_LUMINARIAS_SIN_ROTULOS_REV_F.pdf'
  c=canvas.Canvas(str(fn),pagesize=(W*mm,H*mm),pageCompression=1)
- c.setTitle('MCF Piura · Los 12 tipos de luminarias sin códigos exteriores · REV E')
+ c.setTitle('MCF Piura · Los 12 tipos de luminarias sin códigos exteriores · REV F')
  sh=Catalog(c)
  sh.header('Las 12 luminarias / presentación completa','Acabado del panel L-03 aprobado · Sin códigos debajo de los dibujos · LED conservado en el interior')
  for i,s in enumerate(specs):
@@ -104,7 +114,7 @@ def main(excel,out):
  sh.para(20,255,380,'Correspondencia de leyenda: 15W-A = L-01-15, 15 W y 2.250 lm; 15W-B = L-01-18, 15 W y 1.800 lm. A/B son identificadores de proyecto. Se conservan los códigos originales del Excel y el acabado del dibujo.',9)
  sh.footer()
 
- sh.header('Circulares / aplique y downlights','Aros, difusor y centro conservan la identidad de la familia. El perfil ayuda a reconocer el montaje.')
+ sh.header('Circulares / aplique y downlights','LED uniforme: misma tipografía regular, tamaño relativo y centrado horizontal en las tres luminarias.')
  for i,code in enumerate(['L-02','L-04B','L-04C']):
   x=16+i*132;s=by[code]
   sh.rect(x,56,124,211,None,EDGE,.2,1.5)
@@ -136,9 +146,9 @@ def main(excel,out):
  for s in specs:assert s['code'] in text
  for i,page in enumerate(d):
   assert abs(page.rect.width-W*mm)<.01
-  page.get_pixmap(dpi=110,alpha=False).save(out/f'TODAS_LUMINARIAS_REV_E_{i+1:02d}.png')
+  page.get_pixmap(dpi=110,alpha=False).save(out/f'TODAS_LUMINARIAS_REV_F_{i+1:02d}.png')
  # El gráfico L-03 básico reutiliza Drawing.panel de la revisión aprobada.
- (out/'REV_E_DATOS.json').write_text(json.dumps(dict(tipos=specs,identificacion_interior={'L-01-15':'15W-A','L-01-18':'15W-B'},base_panel='Drawing.panel de propuesta_l03_sin_rotulo.py, REV C',
+ (out/'REV_F_DATOS.json').write_text(json.dumps(dict(tipos=specs,led_circulares={'fuente':'OpenSans-Regular','tamano_mm_por_diametro':.15,'posicion_baseline_por_diametro':.26,'alineacion':'centrado horizontal'},identificacion_interior={'L-01-15':'15W-A','L-01-18':'15W-B'},base_panel='Drawing.panel de propuesta_l03_sin_rotulo.py, REV C',
    codigos_en_simbolos=False,codigos_en_cabeceras_de_ficha=True,paginas=4,planos_modificados=False,bloques_definitivos_creados=False),ensure_ascii=False,indent=2))
  print(json.dumps({'pdf':str(fn),'paginas':len(d),'tipos':len(specs),'bytes':fn.stat().st_size}))
 

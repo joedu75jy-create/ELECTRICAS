@@ -44,7 +44,7 @@ class Detailed(Sheet):
   if led:self.label(x,y,s,'LED',max(4.4,s*.72),col)
   if tag:
    self.txt(x-s*.37,y+s*.39,tag,max(4.0,s*.28),True,col)
- def linear(self,x,y,ww,hh=None,col=CYAN,variant=''):
+ def linear(self,x,y,ww,hh=None,col=CYAN,variant='',led=True):
   hh=hh or ww*.11
   self.rect(x-ww/2,y-hh/2,ww,hh,None,col,.48,min(hh*.25,1.6))
   self.rect(x-ww/2+.8,y-hh/2+.65,ww-1.6,hh-1.3,None,col,.2,min(hh*.2,1.1))
@@ -54,29 +54,29 @@ class Detailed(Sheet):
   for xx in [x-ww*.32,x+ww*.32]:
    self.rect(xx-ww*.011,y-hh*.54,ww*.022,hh*1.08,None,col,.23,.15)
   self.circle(x-ww*.48,y,hh*.075,None,col,.18)
-  if ww>40:self.txt(x-ww*.09,y+hh*.28,'LED',max(5,hh*1.4),True,col)
+  if led and ww>40:self.txt(x-ww*.09,y+hh*.28,'LED',max(5,hh*1.4),True,col)
   if variant:self.txt(x+ww*.21,y+hh*.28,variant,max(4.5,hh*1.05),True,col)
- def circular(self,kind,x,y,d,col=CYAN):
+ def circular(self,kind,x,y,d,col=CYAN,led=True,center_scale=None):
   r=d/2
   if kind=='wall':
    for rr,lw in [(r,.50),(.94*r,.18),(.87*r,.25)]:self.circle(x,y,rr,None,col,lw)
    for angle in [0,90,180,270]:
     a=math.radians(angle);self.circle(x+math.cos(a)*r*.90,y+math.sin(a)*r*.90,r*.024,None,col,.18)
-   self.cross(x,y,r*.33,col)
-   self.label(x,y,d*.82,'LED',max(5,d*.66),col)
+   self.cross(x,y,r*(.33 if center_scale is None else center_scale),col)
+   if led:self.label(x,y,d*.82,'LED',max(5,d*.66),col)
   elif kind=='recess':
    for rr,lw in [(r,.5),(.87*r,.22),(.68*r,.32),(.62*r,.15)]:self.circle(x,y,rr,None,col,lw)
    for xx in [x-r*1.05,x+r*1.05]:
     self.line(xx,y-r*.17,xx,y+r*.17,col,.25)
-   self.cross(x,y,r*.24,col)
-   self.txt(x-r*.28,y+r*.51,'LED',max(4.4,d*.47),True,col)
+   self.cross(x,y,r*(.24 if center_scale is None else center_scale),col)
+   if led:self.txt(x-r*.28,y+r*.51,'LED',max(4.4,d*.47),True,col)
   else:
    for rr,lw in [(r,.55),(.92*r,.35),(.82*r,.22),(.65*r,.25)]:self.circle(x,y,rr,None,col,lw)
    for angle in [30,150,270]:
     a=math.radians(angle);xx=x+math.cos(a)*r*.88;yy=y+math.sin(a)*r*.88
     self.line(xx-r*.04,yy,xx+r*.04,yy,col,.22)
-   self.cross(x,y,r*.24,col)
-   self.txt(x-r*.28,y+r*.51,'LED',max(4.4,d*.47),True,col)
+   self.cross(x,y,r*(.24 if center_scale is None else center_scale),col)
+   if led:self.txt(x-r*.28,y+r*.51,'LED',max(4.4,d*.47),True,col)
  def fixture(self,s,x,y,size=27,col=CYAN,tag=True):
   code=s['code']
   if code.startswith('L-01'):self.linear(x,y,size,col=col,variant='15W' if code=='L-01-15' else '1800' if code=='L-01-18' else '')

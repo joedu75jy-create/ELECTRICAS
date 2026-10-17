@@ -1,0 +1,116 @@
+{
+  "tipos": [
+    {
+      "code": "L-01",
+      "desc": "Luminaria hermética LED lineal 1,20 m",
+      "power": "36",
+      "lm": "5 400",
+      "ip": "IP65",
+      "mount": "Adosada a losa o suspendida sobre perfil portante"
+    },
+    {
+      "code": "L-01-15",
+      "desc": "Luminaria hermética LED lineal",
+      "power": "15",
+      "lm": "2 250",
+      "ip": "IP65",
+      "mount": "Adosada a losa o suspendida sobre perfil portante"
+    },
+    {
+      "code": "L-01-18",
+      "desc": "Luminaria hermética LED lineal 0,60 m",
+      "power": "15",
+      "lm": "1 800",
+      "ip": "IP65",
+      "mount": "Adosada a losa o suspendida sobre perfil portante"
+    },
+    {
+      "code": "L-02",
+      "desc": "Aplique LED circular de pared",
+      "power": "20",
+      "lm": "2 200",
+      "ip": "IP65",
+      "mount": "En pared"
+    },
+    {
+      "code": "L-03",
+      "desc": "Panel LED 60 x 60 cm",
+      "power": "26",
+      "lm": "3 600",
+      "ip": "IP20",
+      "mount": "Empotrado en falso cielo raso"
+    },
+    {
+      "code": "L-03-D",
+      "desc": "Panel LED 60 x 60 cm con driver regulable DALI",
+      "power": "26",
+      "lm": "3 600",
+      "ip": "IP20",
+      "mount": "Empotrado en falso cielo raso"
+    },
+    {
+      "code": "L-03A",
+      "desc": "Panel LED 60 x 60 cm de flujo reducido",
+      "power": "21,6",
+      "lm": "3 000",
+      "ip": "IP20",
+      "mount": "Empotrado en falso cielo raso"
+    },
+    {
+      "code": "L-03-DA",
+      "desc": "Panel LED 60 x 60 cm de flujo reducido con driver regulable DALI",
+      "power": "23,8",
+      "lm": "3 300",
+      "ip": "IP20",
+      "mount": "Empotrado en falso cielo raso"
+    },
+    {
+      "code": "L-03-IP65",
+      "desc": "Panel LED 60 x 60 cm hermético",
+      "power": "26",
+      "lm": "3 600",
+      "ip": "IP65",
+      "mount": "Empotrado en falso cielo raso"
+    },
+    {
+      "code": "L-03-90",
+      "desc": "Panel LED 60 x 60 cm de alta reproducción cromática",
+      "power": "45",
+      "lm": "5 000",
+      "ip": "IP65",
+      "mount": "Empotrado en falso cielo raso"
+    },
+    {
+      "code": "L-04B",
+      "desc": "Downlight LED circular empotrable",
+      "power": "11",
+      "lm": "1 100",
+      "ip": "IP44 frontal",
+      "mount": "Empotrado en falso cielo raso"
+    },
+    {
+      "code": "L-04C",
+      "desc": "Downlight LED circular de superficie",
+      "power": "11",
+      "lm": "1 100",
+      "ip": "IP44 frontal",
+      "mount": "Adosado a losa"
+    }
+  ],
+  "led_circulares": {
+    "fuente": "OpenSans-Regular",
+    "tamano_mm_por_diametro": 0.15,
+    "posicion_baseline_por_diametro": 0.26,
+    "alineacion": "centrado horizontal"
+  },
+  "identificacion_interior": {
+    "L-01-15": "15W-A",
+    "L-01-18": "15W-B"
+  },
+  "base_panel": "Drawing.panel de propuesta_l03_sin_rotulo.py, REV C",
+  "codigos_en_simbolos": false,
+  "codigos_en_cabeceras_de_ficha": true,
+  "paginas": 4,
+  "planos_modificados": false,
+  "bloques_definitivos_creados": false
+}
