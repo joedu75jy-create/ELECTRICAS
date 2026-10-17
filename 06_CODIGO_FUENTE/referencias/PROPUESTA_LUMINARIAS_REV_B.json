@@ -1,0 +1,93 @@
+{
+  "tipos": [
+    {
+      "code": "L-01",
+      "power": "36",
+      "lm": "5 400",
+      "ip": "IP65",
+      "desc": "Luminaria hermética LED lineal 1,20 m"
+    },
+    {
+      "code": "L-01-15",
+      "power": "15",
+      "lm": "2 250",
+      "ip": "IP65",
+      "desc": "Luminaria hermética LED lineal"
+    },
+    {
+      "code": "L-01-18",
+      "power": "15",
+      "lm": "1 800",
+      "ip": "IP65",
+      "desc": "Luminaria hermética LED lineal 0,60 m"
+    },
+    {
+      "code": "L-02",
+      "power": "20",
+      "lm": "2 200",
+      "ip": "IP65",
+      "desc": "Aplique LED circular de pared"
+    },
+    {
+      "code": "L-03",
+      "power": "26",
+      "lm": "3 600",
+      "ip": "IP20",
+      "desc": "Panel LED 60 x 60 cm"
+    },
+    {
+      "code": "L-03-D",
+      "power": "26",
+      "lm": "3 600",
+      "ip": "IP20",
+      "desc": "Panel LED 60 x 60 cm con driver regulable DALI"
+    },
+    {
+      "code": "L-03A",
+      "power": "21,6",
+      "lm": "3 000",
+      "ip": "IP20",
+      "desc": "Panel LED 60 x 60 cm de flujo reducido"
+    },
+    {
+      "code": "L-03-DA",
+      "power": "23,8",
+      "lm": "3 300",
+      "ip": "IP20",
+      "desc": "Panel LED 60 x 60 cm de flujo reducido con driver regulable DALI"
+    },
+    {
+      "code": "L-03-IP65",
+      "power": "26",
+      "lm": "3 600",
+      "ip": "IP65",
+      "desc": "Panel LED 60 x 60 cm hermético"
+    },
+    {
+      "code": "L-03-90",
+      "power": "45",
+      "lm": "5 000",
+      "ip": "IP65",
+      "desc": "Panel LED 60 x 60 cm de alta reproducción cromática"
+    },
+    {
+      "code": "L-04B",
+      "power": "11",
+      "lm": "1 100",
+      "ip": "IP44 frontal",
+      "desc": "Downlight LED circular empotrable"
+    },
+    {
+      "code": "L-04C",
+      "power": "11",
+      "lm": "1 100",
+      "ip": "IP44 frontal",
+      "desc": "Downlight LED circular de superficie"
+    }
+  ],
+  "referencia_estilo": "Captura del usuario: marco, esquina doble, circulo con ejes y LED",
+  "dxf_referencia_leido": false,
+  "motivo": "Archivo supera limite de transferencia de 32 MiB",
+  "planos_modificados": false,
+  "bloques_definitivos_creados": false
+}
