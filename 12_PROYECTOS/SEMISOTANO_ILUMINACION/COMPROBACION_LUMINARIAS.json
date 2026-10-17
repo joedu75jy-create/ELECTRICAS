@@ -1,0 +1,26 @@
+{
+  "luminarias": 162,
+  "por_tipo": {
+    "L-01": 20,
+    "L-01-15": 118,
+    "L-02": 13,
+    "L-04B": 7,
+    "L-03-IP65": 4
+  },
+  "potencia_w": 2931.0,
+  "bloques_de_luminarias_disponibles": 12,
+  "entidades_originales_conservadas": 3134,
+  "auditoria_errores": 0,
+  "auditoria_correcciones": 0,
+  "rotulos_exteriores": 0,
+  "recorridos": 0,
+  "fuente_xy": "Tablas de posiciones, memoria DIALux REV1",
+  "unidad_individual_vereda_02": "Pagina 118, luminaria 20: X=40.520 Y=15.187 h=2.990",
+  "arquitectura_sha256": "ee18d6612f48f196b4f9a63150a24ad7b1af3afdd3c9e7fe69354c017d008477",
+  "excel_sha256": "87cc26c49d85f1918f9af8d8c44c0c595965ce0ed136f2d2ec1470197c15acbb",
+  "memoria_sha256": "27fe594f2db035bdb17aa7a700bcdbd2cfeeb03671c00c3dd9ef5379267c0a37",
+  "dxf_sha256": "fb3b86ffaca384487508e6695d5390d266c10963d6415ddaf7445168dc265e70",
+  "giro": "Rampa: horizontal; otras lineales: vertical, segun planos de situacion. Giros leidos visualmente, no de tabla angular.",
+  "alturas": "Atributos en metros, insercion XY en Z=0; no se crea modelo de montaje 3D.",
+  "validacion_autocad": "No disponible en este entorno; DXF guardado/reabierto/auditado y PDF renderizado de sus hojas."
+}
