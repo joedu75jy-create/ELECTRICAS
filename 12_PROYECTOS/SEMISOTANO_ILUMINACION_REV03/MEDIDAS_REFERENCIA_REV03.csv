@@ -1,0 +1,13 @@
+﻿largo_mm,ancho_mm,diametro_mm,estado,fuente,bloque,tipo
+1200,80,0,Largo nominal del Excel; ancho aproximado,"Cuadro del usuario: L-01, lineal 1,20 m",EI_LUM_L_01,L-01
+599,77,0,Referencia de fabricante,https://www.ledvance.lat/es/product-datasheet/232595/261282,EI_LUM_L_01_15,L-01-15
+600,80,0,Largo nominal del Excel; ancho aproximado,"Cuadro del usuario: L-01-18, lineal 0,60 m",EI_LUM_L_01_18,L-01-18
+390,390,390,Referencia de fabricante WL140V,https://www.assets.signify.com/is/content/Signify/911401847682_EU.en_SA.PROF.FP,EI_LUM_L_02,L-02
+600,600,0,Módulo nominal del Excel; cuerpo por confirmar,Cuadro del usuario: panel 60 × 60 cm,EI_LUM_L_03,L-03
+600,600,0,Módulo nominal del Excel; cuerpo por confirmar,Cuadro del usuario: panel 60 × 60 cm,EI_LUM_L_03_D,L-03-D
+600,600,0,Módulo nominal del Excel; cuerpo por confirmar,Cuadro del usuario: panel 60 × 60 cm,EI_LUM_L_03A,L-03A
+600,600,0,Módulo nominal del Excel; cuerpo por confirmar,Cuadro del usuario: panel 60 × 60 cm,EI_LUM_L_03_DA,L-03-DA
+595,595,0,Referencia de fabricante RC132V,https://www.signify.com/cs-cz/prof/interierova-svitidla/zapustene/philips-coreline-panel-gen6/911401891585_EU/product,EI_LUM_L_03_IP65,L-03-IP65
+600,600,0,Módulo nominal del Excel; cuerpo por confirmar,Cuadro del usuario: panel 60 × 60 cm,EI_LUM_L_03_90,L-03-90
+166,166,166,Diámetro exterior de fabricante DN145B,https://www.signify.com/global/prof/indoor-luminaires/downlights/philips-coreline-slimdownlight/911401806080_EU/product,EI_LUM_L_04B,L-04B
+180,180,180,Estimación provisional; modelo no identificado,Estimación para el tipo de superficie de 11 W; no utilizado en este nivel,EI_LUM_L_04C,L-04C

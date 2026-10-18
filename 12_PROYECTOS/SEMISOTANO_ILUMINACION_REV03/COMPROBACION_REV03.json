@@ -1,0 +1,26 @@
+{
+  "luminarias": 162,
+  "bloques": 12,
+  "posiciones_modificadas": 0,
+  "giros_modificados": 0,
+  "cantidades_por_tipo": {
+    "L-01": 20,
+    "L-01-15": 118,
+    "L-02": 13,
+    "L-04B": 7,
+    "L-03-IP65": 4
+  },
+  "escala_insercion_modelo": 1,
+  "unidades": "metros",
+  "auditoria_errores": 0,
+  "auditoria_correcciones": 0,
+  "superposiciones_graficas_estacionamiento_con_franjas_y_proyecciones_contrastadas": 0,
+  "circular_vs_lineal_corta": {
+    "downlight_diametro_mm": 166,
+    "aplique_diametro_mm": 390,
+    "lineal_largo_mm": 599,
+    "lineal_ancho_mm": 77
+  },
+  "peraltes_alturas_y_recalculo": "Pendientes, como en REV02",
+  "dxf_sha256": "f64435c1a7335b1f7b5e2534f312830dcf27ef74eba37768aea2153f58a11e36"
+}

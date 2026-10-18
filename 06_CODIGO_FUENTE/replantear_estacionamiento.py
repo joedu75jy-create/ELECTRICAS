@@ -154,7 +154,7 @@ def render_sheet(doc, sheet, width, height, target_layer, cache=None):
     frontend = Frontend(RenderContext(doc), backend, config=Configuration(background_policy=BackgroundPolicy.WHITE, color_policy=ColorPolicy.COLOR))
 
     def override(entity, props):
-        if props.layer == target_layer:
+        if props.layer == target_layer or (target_layer == '*' and props.layer.startswith('IE-LUM-')):
             props.color = BLUE
         elif props.layer.startswith('IE-LUM-'):
             props.color = '#aab0b5'

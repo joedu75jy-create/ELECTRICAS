@@ -1,0 +1,110 @@
+{
+  "L-01": {
+    "largo_mm": 1200,
+    "ancho_mm": 80,
+    "diametro_mm": 0,
+    "estado": "Largo nominal del Excel; ancho aproximado",
+    "fuente": "Cuadro del usuario: L-01, lineal 1,20 m",
+    "bloque": "EI_LUM_L_01",
+    "tipo": "L-01"
+  },
+  "L-01-15": {
+    "largo_mm": 599,
+    "ancho_mm": 77,
+    "diametro_mm": 0,
+    "estado": "Referencia de fabricante",
+    "fuente": "https://www.ledvance.lat/es/product-datasheet/232595/261282",
+    "bloque": "EI_LUM_L_01_15",
+    "tipo": "L-01-15"
+  },
+  "L-01-18": {
+    "largo_mm": 600,
+    "ancho_mm": 80,
+    "diametro_mm": 0,
+    "estado": "Largo nominal del Excel; ancho aproximado",
+    "fuente": "Cuadro del usuario: L-01-18, lineal 0,60 m",
+    "bloque": "EI_LUM_L_01_18",
+    "tipo": "L-01-18"
+  },
+  "L-02": {
+    "largo_mm": 390,
+    "ancho_mm": 390,
+    "diametro_mm": 390,
+    "estado": "Referencia de fabricante WL140V",
+    "fuente": "https://www.assets.signify.com/is/content/Signify/911401847682_EU.en_SA.PROF.FP",
+    "bloque": "EI_LUM_L_02",
+    "tipo": "L-02"
+  },
+  "L-03": {
+    "largo_mm": 600,
+    "ancho_mm": 600,
+    "diametro_mm": 0,
+    "estado": "Módulo nominal del Excel; cuerpo por confirmar",
+    "fuente": "Cuadro del usuario: panel 60 × 60 cm",
+    "bloque": "EI_LUM_L_03",
+    "tipo": "L-03"
+  },
+  "L-03-D": {
+    "largo_mm": 600,
+    "ancho_mm": 600,
+    "diametro_mm": 0,
+    "estado": "Módulo nominal del Excel; cuerpo por confirmar",
+    "fuente": "Cuadro del usuario: panel 60 × 60 cm",
+    "bloque": "EI_LUM_L_03_D",
+    "tipo": "L-03-D"
+  },
+  "L-03A": {
+    "largo_mm": 600,
+    "ancho_mm": 600,
+    "diametro_mm": 0,
+    "estado": "Módulo nominal del Excel; cuerpo por confirmar",
+    "fuente": "Cuadro del usuario: panel 60 × 60 cm",
+    "bloque": "EI_LUM_L_03A",
+    "tipo": "L-03A"
+  },
+  "L-03-DA": {
+    "largo_mm": 600,
+    "ancho_mm": 600,
+    "diametro_mm": 0,
+    "estado": "Módulo nominal del Excel; cuerpo por confirmar",
+    "fuente": "Cuadro del usuario: panel 60 × 60 cm",
+    "bloque": "EI_LUM_L_03_DA",
+    "tipo": "L-03-DA"
+  },
+  "L-03-IP65": {
+    "largo_mm": 595,
+    "ancho_mm": 595,
+    "diametro_mm": 0,
+    "estado": "Referencia de fabricante RC132V",
+    "fuente": "https://www.signify.com/cs-cz/prof/interierova-svitidla/zapustene/philips-coreline-panel-gen6/911401891585_EU/product",
+    "bloque": "EI_LUM_L_03_IP65",
+    "tipo": "L-03-IP65"
+  },
+  "L-03-90": {
+    "largo_mm": 600,
+    "ancho_mm": 600,
+    "diametro_mm": 0,
+    "estado": "Módulo nominal del Excel; cuerpo por confirmar",
+    "fuente": "Cuadro del usuario: panel 60 × 60 cm",
+    "bloque": "EI_LUM_L_03_90",
+    "tipo": "L-03-90"
+  },
+  "L-04B": {
+    "largo_mm": 166,
+    "ancho_mm": 166,
+    "diametro_mm": 166,
+    "estado": "Diámetro exterior de fabricante DN145B",
+    "fuente": "https://www.signify.com/global/prof/indoor-luminaires/downlights/philips-coreline-slimdownlight/911401806080_EU/product",
+    "bloque": "EI_LUM_L_04B",
+    "tipo": "L-04B"
+  },
+  "L-04C": {
+    "largo_mm": 180,
+    "ancho_mm": 180,
+    "diametro_mm": 180,
+    "estado": "Estimación provisional; modelo no identificado",
+    "fuente": "Estimación para el tipo de superficie de 11 W; no utilizado en este nivel",
+    "bloque": "EI_LUM_L_04C",
+    "tipo": "L-04C"
+  }
+}
